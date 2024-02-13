@@ -31,6 +31,11 @@ const Content: FC = () => {
             <Card />
           </div>
         </section>
+        <section className={styles.wallSection}>
+          <Title />
+          <Description />
+          <Button />
+        </section>
       </main>
     </Layout>
   )
