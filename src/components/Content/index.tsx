@@ -5,6 +5,9 @@ import { Layout } from '../Layout'
 import { Title } from './Title'
 import { Description } from './Description'
 import { Button } from '../UI/Button'
+import { WallTitle } from './WallTitle'
+import { WallLink } from './WallLink'
+import { Card } from './Card'
 
 const Content: FC = () => {
   return (
@@ -15,6 +18,18 @@ const Content: FC = () => {
           <Title />
           <Description />
           <Button />
+        </section>
+        <section className={styles.wallPlace}>
+          <WallTitle />
+          <WallLink />
+          <div className={styles.wallCard}>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </section>
       </main>
     </Layout>

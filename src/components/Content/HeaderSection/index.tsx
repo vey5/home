@@ -1,6 +1,5 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
-import { Typography } from '@mui/material'
 
 const HeaderSection: FC = () => {
   return (
