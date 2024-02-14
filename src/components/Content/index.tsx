@@ -8,6 +8,8 @@ import { Button } from '../UI/Button'
 import { WallTitle } from './WallTitle'
 import { WallLink } from './WallLink'
 import { Card } from './Card'
+import { Desc } from './Description/Desc'
+import { Avatar } from './Avatar'
 
 const Content: FC = () => {
   return (
@@ -35,6 +37,15 @@ const Content: FC = () => {
           <Title />
           <Description />
           <Button />
+        </section>
+        <section className={styles.postSection}>
+          <Title />
+          <Description />
+          <Button />
+        </section>
+        <section className={styles.avatarSection}>
+          <Desc />
+          <Avatar />
         </section>
       </main>
     </Layout>
