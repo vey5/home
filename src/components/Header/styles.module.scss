@@ -1,0 +1,22 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 100px;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 60px;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.navItem {
+  color: #fff;
+}
