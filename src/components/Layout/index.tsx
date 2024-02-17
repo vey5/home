@@ -5,9 +5,7 @@ import { Header } from '../Header'
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className={styles.layout}>
-      <div className={styles.header}>
-        <Header />
-      </div>
+      <Header />
       <div className={styles.content}>{children}</div>
     </div>
   )

@@ -1,16 +1,26 @@
 .navBar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: black;
   height: 100px;
+  width: 100%;
 }
 
 .navList {
   display: flex;
-  justify-content: space-evenly;
   text-align: center;
   gap: 60px;
+  margin-right: -134px;
+}
+
+.navBar {
+  display: flex;
+}
+
+.logo {
+  margin-right: -177px;
+  margin-left: -14px;
 }
 
 .navLink {
@@ -19,4 +29,5 @@
 
 .navItem {
   color: #fff;
+  text-decoration: none;
 }

@@ -10,8 +10,8 @@ const Header: FC = () => {
     <div className={styles.navBar}>
       <div className={styles.logo}>
         <LogoIcon />
-        <img className={styles.img} src={shape} alt="logo" />
       </div>
+      <img className={styles.img} src={shape} alt="logo" />
       <ul className={styles.navList}>
         <li className={styles.navLink}>
           <Link className={styles.navItem}>Nav Link</Link>

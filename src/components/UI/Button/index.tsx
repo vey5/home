@@ -5,11 +5,11 @@ import { Button as MaterialButton } from '@mui/material'
 
 const Button: FC = () => {
   return (
-    <div className={styles.button}>
-      <MaterialButton endIcon={<TrendingFlat className={styles.endArrow} />} className={styles.btn}>
-        onClick
-      </MaterialButton>
-    </div>
+    // <div className={styles.button}>
+    <MaterialButton endIcon={<TrendingFlat className={styles.endArrow} />} className={styles.btn}>
+      Work with us
+    </MaterialButton>
+    // </div>
   )
 }
 
