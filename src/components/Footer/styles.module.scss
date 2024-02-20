@@ -8,6 +8,7 @@
   gap: 14px;
   border-bottom: 1px solid rgb(128, 128, 128, 0.2);
   padding-bottom: 40px;
+  padding-top: 80px;
 }
 
 .title {
@@ -25,4 +26,30 @@
   line-height: -1px;
   letter-spacing: -1.06px;
   margin-right: 307px;
+}
+
+.logo {
+  margin-top: 68px;
+  display: flex;
+  align-items: center;
+  gap: 9.6px;
+  margin-bottom: 34px;
+}
+
+.img {
+  height: 16px;
+}
+
+.social {
+  display: flex;
+  gap: 28px;
+  color: #fff;
+}
+
+.columnLink {
+  display: flex;
+  justify-content: end;
+  gap: 159px;
+  text-align: center;
+  margin-top: -107px;
 }
