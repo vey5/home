@@ -8,10 +8,10 @@ import { Button } from '../UI/Button'
 const Header: FC = () => {
   return (
     <div className={styles.navBar}>
-      <div className={styles.logo}>
-        <LogoIcon />
-      </div>
+      {/* <div className={styles.logo}> */}
+      <LogoIcon />
       <img className={styles.img} src={shape} alt="logo" />
+      {/* </div> */}
       <ul className={styles.navList}>
         <li className={styles.navLink}>
           <Link className={styles.navItem}>Nav Link</Link>

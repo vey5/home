@@ -4,4 +4,35 @@
   height: 982px;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 5px;
+}
+
+.header {
+  max-width: 1070px;
+  height: 100px;
+}
+
+.sectionHeader {
+  max-width: 1070px;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -2.01px;
+  max-width: 519px;
+}
+
+.desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  max-width: 428px;
 }

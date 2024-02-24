@@ -10,12 +10,13 @@ import { WallLink } from './WallLink'
 import { Card } from './Card'
 import { Desc } from './Description/Desc'
 import { Avatar } from './Avatar'
+import { Banner } from './Banner'
 
 const Content: FC = () => {
   return (
     <Layout>
       <main className={styles.main}>
-        <HeaderSection />
+        {/* <HeaderSection /> */}
         <section className={styles.wallSection}>
           <Title />
           <Description />

@@ -7,7 +7,6 @@ import { Banner } from '../Content/Banner'
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className={styles.layout}>
-      <Header />
       <Banner />
       <div className={styles.content}>{children}</div>
       <div className={styles.footContainer}>
