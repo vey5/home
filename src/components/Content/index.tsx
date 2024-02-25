@@ -11,6 +11,7 @@ import { Card } from './Card'
 import { Desc } from './Description/Desc'
 import { Avatar } from './Avatar'
 import { Banner } from './Banner'
+import content from '../../assets/Content.png'
 
 const Content: FC = () => {
   return (
@@ -18,9 +19,12 @@ const Content: FC = () => {
       <main className={styles.main}>
         {/* <HeaderSection /> */}
         <section className={styles.wallSection}>
-          <Title />
-          <Description />
-          <Button />
+          <img className={styles.contentImg} src={content} alt="content" />
+          <div className={styles.text}>
+            <Title />
+            <Description />
+            <Button />
+          </div>
         </section>
         <section className={styles.wallPlace}>
           <WallTitle />
