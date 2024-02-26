@@ -1,6 +1,5 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
-import { HeaderSection } from './HeaderSection'
 import { Layout } from '../Layout'
 import { Title } from './Title'
 import { Description } from './Description'
@@ -10,7 +9,6 @@ import { WallLink } from './WallLink'
 import { Card } from './Card'
 import { Desc } from './Description/Desc'
 import { Avatar } from './Avatar'
-import { Banner } from './Banner'
 import content from '../../assets/Content.png'
 
 const Content: FC = () => {
@@ -26,18 +24,20 @@ const Content: FC = () => {
             <Button />
           </div>
         </section>
-        <section className={styles.wallPlace}>
-          <WallTitle />
-          <WallLink />
-          <div className={styles.wallCard}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
-        </section>
+        <div className={styles.wallContainer}>
+          <section className={styles.wallPlace}>
+            <WallTitle />
+            <WallLink />
+            <div className={styles.wallCard}>
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </div>
+          </section>
+        </div>
         <section className={styles.wallSection}>
           <Title />
           <Description />

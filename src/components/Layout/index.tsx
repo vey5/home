@@ -9,9 +9,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       <Banner />
       <div className={styles.content}>{children}</div>
       <div className={styles.footContainer}>
-        <div className={styles.footer}>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   )

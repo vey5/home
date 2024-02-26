@@ -8,10 +8,25 @@
 .wallSection {
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .contentImg {
   width: 704px;
   height: 657px;
+}
+
+.wallContainer {
+  background-color: rgb(245, 245, 245);
+  height: 1817px;
+  padding-top: 138px;
+  margin-top: -138px;
+}
+
+.wallPlace {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
