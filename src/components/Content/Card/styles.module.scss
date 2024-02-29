@@ -1,3 +1,18 @@
 .card {
   border-radius: 20px;
+  box-shadow: 0px 32px 34px 0px rgba(0, 0, 0, 0.13);
+}
+
+.wallCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 31px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-left: 20px;
 }

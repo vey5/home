@@ -28,14 +28,7 @@ const Content: FC = () => {
           <section className={styles.wallPlace}>
             <WallTitle />
             <WallLink />
-            <div className={styles.wallCard}>
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
+            <Card />
           </section>
         </div>
         <section className={styles.wallSection}>
