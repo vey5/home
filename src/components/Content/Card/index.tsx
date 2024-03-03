@@ -25,8 +25,20 @@ const Card: FC = () => {
               Multo House
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              <div className={styles.icons}>
+                <div className={styles.Icon}>
+                  <BedIcon />
+                  <p className={styles.num}>4</p>
+                </div>
+                <div className={styles.Icon}>
+                  <CountertopsIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+                <div className={styles.Icon}>
+                  <FlareIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+              </div>
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -39,8 +51,20 @@ const Card: FC = () => {
               Multo House
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              <div className={styles.icons}>
+                <div className={styles.Icon}>
+                  <BedIcon />
+                  <p className={styles.num}>4</p>
+                </div>
+                <div className={styles.Icon}>
+                  <CountertopsIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+                <div className={styles.Icon}>
+                  <FlareIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+              </div>
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -53,8 +77,20 @@ const Card: FC = () => {
               Multo House
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              <div className={styles.icons}>
+                <div className={styles.Icon}>
+                  <BedIcon />
+                  <p className={styles.num}>4</p>
+                </div>
+                <div className={styles.Icon}>
+                  <CountertopsIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+                <div className={styles.Icon}>
+                  <FlareIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+              </div>
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -67,8 +103,20 @@ const Card: FC = () => {
               Multo House
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              <div className={styles.icons}>
+                <div className={styles.Icon}>
+                  <BedIcon />
+                  <p className={styles.num}>4</p>
+                </div>
+                <div className={styles.Icon}>
+                  <CountertopsIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+                <div className={styles.Icon}>
+                  <FlareIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+              </div>
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -81,8 +129,20 @@ const Card: FC = () => {
               Multo House
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              <div className={styles.icons}>
+                <div className={styles.Icon}>
+                  <BedIcon />
+                  <p className={styles.num}>4</p>
+                </div>
+                <div className={styles.Icon}>
+                  <CountertopsIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+                <div className={styles.Icon}>
+                  <FlareIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+              </div>
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -95,8 +155,20 @@ const Card: FC = () => {
               Multo House
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              <div className={styles.icons}>
+                <div className={styles.Icon}>
+                  <BedIcon />
+                  <p className={styles.num}>4</p>
+                </div>
+                <div className={styles.Icon}>
+                  <CountertopsIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+                <div className={styles.Icon}>
+                  <FlareIcon />
+                  <p className={styles.num}>2</p>
+                </div>
+              </div>
             </Typography>
           </CardContent>
         </CardActionArea>

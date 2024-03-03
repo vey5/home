@@ -16,3 +16,23 @@
   padding-top: 15px;
   padding-left: 20px;
 }
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 28px;
+  padding-right: 42px;
+}
+
+.Icon {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 700;
+  gap: 9px;
+}
+
+.num {
+  font-size: 17px;
+  font-weight: 700;
+}
