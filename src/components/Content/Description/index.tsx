@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 const Description: FC = () => {
   return (
-    <div className={styles.desc}>
+    <div>
       <p className={styles.text}>
         Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem se
         repellere, idque instituit docere sic: omne animal, simul atque integre iudicante itaque

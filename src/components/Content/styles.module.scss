@@ -6,6 +6,7 @@
 }
 
 .wallSection {
+  position: relative;
   display: flex;
   justify-content: space-between;
   max-width: 1070px;
@@ -14,13 +15,23 @@
 }
 
 .contentImg {
+  position: absolute;
   width: 704px;
   height: 657px;
 }
 
+.contentImg2 {
+  position: absolute;
+  width: 704px;
+  height: 657px;
+  border-radius: 57px 0px 0px 0px;
+  left: 49%;
+  top: -48%;
+}
+
 .wallContainer {
   background-color: rgb(245, 245, 245);
-  height: 1817px;
+  height: 1717px;
   padding-top: 138px;
   margin-top: -138px;
 }
@@ -29,4 +40,8 @@
   max-width: 1070px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.text {
+  max-width: 475px;
 }

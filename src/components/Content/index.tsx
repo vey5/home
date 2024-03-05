@@ -32,9 +32,12 @@ const Content: FC = () => {
           </section>
         </div>
         <section className={styles.wallSection}>
-          <Title />
-          <Description />
-          <Button />
+          <div className={styles.text}>
+            <Title />
+            <Description />
+            <Button />
+          </div>
+          <img className={styles.contentImg2} src={content} alt="content" />
         </section>
         <section className={styles.postSection}>
           <Title />
