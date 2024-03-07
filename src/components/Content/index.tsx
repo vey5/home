@@ -10,6 +10,8 @@ import { Card } from './Card'
 import { Desc } from './Description/Desc'
 import { Avatar } from './Avatar'
 import content from '../../assets/Content.png'
+import { Title2 } from './Description/Title2'
+import { Desc2 } from './Description/Title2/Desc2'
 
 const Content: FC = () => {
   return (
@@ -39,11 +41,13 @@ const Content: FC = () => {
           </div>
           <img className={styles.contentImg2} src={content} alt="content" />
         </section>
-        <section className={styles.postSection}>
-          <Title />
-          <Description />
-          <Button />
-        </section>
+        <div className={styles.postContainer}>
+          <section className={styles.postSection}>
+            <Title2 />
+            <Desc2 />
+            <Button />
+          </section>
+        </div>
         <section className={styles.avatarSection}>
           <Desc />
           <Avatar />

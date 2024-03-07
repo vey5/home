@@ -15,7 +15,6 @@
 }
 
 .contentImg {
-  position: absolute;
   width: 704px;
   height: 657px;
 }
@@ -44,4 +43,22 @@
 
 .text {
   max-width: 475px;
+}
+
+.postContainer {
+  background: linear-gradient(225deg, rgb(39, 26, 0) 32.003%, rgba(0, 0, 0, 0.98) 132.603%);
+  height: 674px;
+  margin-top: 150px;
+}
+
+.postSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 674px;
+  max-width: 475px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
 }
