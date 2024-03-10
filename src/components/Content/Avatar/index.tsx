@@ -2,28 +2,29 @@ import styles from './styles.module.scss'
 import { FC } from 'react'
 import { Avatar as MaterialAvatar } from '@mui/material'
 import Stack from '@mui/material/Stack'
+import face from '../../../assets/Face.png'
 
 const Avatar: FC = () => {
   return (
-    <div className={styles.avatar}>
-      <Stack direction="row" spacing={3}>
-        <MaterialAvatar className={styles.img} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+    <Stack className={styles.avatar} direction="row" spacing={3}>
+      <MaterialAvatar className={styles.img} alt="Remy Sharp" src={face} />
+      <div className={styles.spanText}>
+        <span className={styles.spanTitle}>Lara Madrigal</span>
+        <span className={styles.subTitle}>Client</span>
+      </div>
+      <div className={styles.container}>
+        <MaterialAvatar className={styles.img} alt="Travis Howard" src={face} />
         <div className={styles.spanText}>
-          <span>Lara Madrigal</span>
-          <span>Client</span>
+          <span className={styles.whiteTitle}>Lara Madrigal</span>
+          <span className={styles.subTitle}>Client</span>
         </div>
-        <MaterialAvatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-        <div className={styles.spanText}>
-          <span>Lara Madrigal</span>
-          <span>Client</span>
-        </div>
-        <MaterialAvatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-        <div className={styles.spanText}>
-          <span>Lara Madrigal</span>
-          <span>Client</span>
-        </div>
-      </Stack>
-    </div>
+      </div>
+      <MaterialAvatar className={styles.img} alt="Cindy Baker" src={face} />
+      <div className={styles.spanText}>
+        <span className={styles.spanTitle}>Lara Madrigal</span>
+        <span className={styles.subTitle}>Client</span>
+      </div>
+    </Stack>
   )
 }
 

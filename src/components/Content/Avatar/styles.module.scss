@@ -1,10 +1,47 @@
 .avatar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .spanText {
   display: flex;
   flex-direction: column;
   padding-right: 120px;
+}
+
+.spanTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin-bottom: 4px;
+}
+
+.subTitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(151, 151, 151);
+}
+
+.whiteTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 4px;
+}
+
+.img {
+  width: 49px;
+  height: 49px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  background: rgb(0, 0, 0);
+  width: 336px;
+  height: 141px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px !important;
 }

@@ -62,3 +62,13 @@
   padding: 0 16px;
   text-align: center;
 }
+
+.avatarSection {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 630px;
+}
