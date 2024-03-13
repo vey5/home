@@ -9,7 +9,8 @@
 }
 
 .header {
-  max-width: 1070px;
+  display: flex;
+  justify-content: center;
   height: 100px;
   margin: 0 auto;
 }
@@ -38,3 +39,9 @@
   opacity: 0.6;
   max-width: 428px;
 }
+
+// @media (max-width: 1324px) {
+//   .banner {
+//     background-size: 85%;
+//   }
+// }

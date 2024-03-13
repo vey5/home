@@ -1,13 +1,26 @@
 import { Link } from '@mui/material'
 import styles from './styles.module.scss'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { LogoIcon } from '../../assets/LogoIcon'
 import shape from '../../assets/Shape.png'
 import { Button } from '../UI/Button'
+import classNames from 'classnames'
 
 const Header: FC = () => {
+  const [offset, setOffset] = useState(false)
+
+  const offsetHeight = () => {
+    if (window.scrollY >= 982) {
+      setOffset(true)
+    } else {
+      setOffset(false)
+    }
+  }
+
+  window.addEventListener('scroll', offsetHeight)
+
   return (
-    <div className={styles.navBar}>
+    <div className={offset ? classNames(styles.navBar, styles.fixed) : styles.navBar}>
       {/* <div className={styles.logo}> */}
       <LogoIcon />
       <img className={styles.img} src={shape} alt="logo" />

@@ -7,3 +7,14 @@
   background: linear-gradient(225deg, rgb(39, 26, 0) 37.091%, rgba(0, 0, 0, 0.98) 82.193%);
   height: 551px;
 }
+
+.layout {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+// @media (max-width: 1324px) {
+//   .layout {
+//     background-size: 85%;
+//   }
+// }
