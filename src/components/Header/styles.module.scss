@@ -39,3 +39,27 @@
   color: #fff;
   text-decoration: none;
 }
+
+@media (max-width: 1075px) {
+  .navItem {
+    font-size: 12px;
+  }
+
+  .fixed {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 923px) {
+  .img {
+    height: 15px;
+  }
+
+  .navList {
+    gap: 30px;
+  }
+
+  .navItem {
+    font-size: 12px;
+  }
+}

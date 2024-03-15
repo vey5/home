@@ -18,3 +18,9 @@
   position: absolute;
   top: -8%;
 }
+
+@media (max-width: 630px) {
+  .desc {
+    font-size: 40px;
+  }
+}

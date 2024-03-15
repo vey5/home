@@ -28,6 +28,7 @@
   line-height: 80px;
   letter-spacing: -2.01px;
   max-width: 519px;
+  padding: 0 16px;
 }
 
 .desc {
@@ -38,10 +39,17 @@
   color: rgb(255, 255, 255);
   opacity: 0.6;
   max-width: 428px;
+  padding: 0 16px;
 }
 
-// @media (max-width: 1324px) {
-//   .banner {
-//     background-size: 85%;
-//   }
-// }
+@media (max-width: 773px) {
+  .title {
+    font-size: 72px;
+    padding: 0 16px;
+  }
+
+  .desc {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+}

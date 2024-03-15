@@ -73,9 +73,16 @@
   min-height: 630px;
 }
 
-// @media (max-width: 1324px) {
-// //   .wallSection {
-// //     display: flex;
-// //     flex-direction: column;
-// //   }
-// // }
+@media (max-width: 1024px) {
+  .contentImg {
+    width: 500px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 822px) {
+  .wallSection {
+    display: flex;
+    flex-direction: column;
+  }
+}

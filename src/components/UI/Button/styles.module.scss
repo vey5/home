@@ -23,3 +23,10 @@
 .btn:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 823px) {
+  .btn {
+    min-width: 150px;
+    font-size: 14px;
+  }
+}
