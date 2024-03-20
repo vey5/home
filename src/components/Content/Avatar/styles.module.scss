@@ -45,3 +45,9 @@
   align-items: center;
   margin-right: 50px !important;
 }
+
+@media (max-width: 1024px) {
+  .avatar {
+    margin-left: 15px;
+  }
+}

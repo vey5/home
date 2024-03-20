@@ -24,3 +24,9 @@
   top: -26%;
   left: 35%;
 }
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 22px;
+  }
+}

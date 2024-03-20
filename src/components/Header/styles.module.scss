@@ -40,17 +40,18 @@
   text-decoration: none;
 }
 
-@media (max-width: 1075px) {
+@media (max-width: 1024px) {
   .navItem {
     font-size: 12px;
   }
 
   .fixed {
     padding: 0 16px;
+    min-height: 100px;
   }
 }
 
-@media (max-width: 923px) {
+@media (max-width: 1024px) {
   .img {
     height: 15px;
   }

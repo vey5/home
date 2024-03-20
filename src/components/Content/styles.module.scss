@@ -6,7 +6,6 @@
 }
 
 .wallSection {
-  position: relative;
   display: flex;
   justify-content: space-between;
   max-width: 1070px;
@@ -20,12 +19,9 @@
 }
 
 .contentImg2 {
-  position: absolute;
   width: 704px;
   height: 657px;
   border-radius: 57px 0px 0px 0px;
-  left: 49%;
-  top: -48%;
 }
 
 .wallContainer {
@@ -74,15 +70,12 @@
 }
 
 @media (max-width: 1024px) {
-  .contentImg {
-    width: 500px;
-    height: 600px;
-  }
-}
-
-@media (max-width: 822px) {
   .wallSection {
-    display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .flexSection {
+    flex-direction: column-reverse;
   }
 }

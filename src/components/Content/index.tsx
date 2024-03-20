@@ -12,6 +12,7 @@ import { Avatar } from './Avatar'
 import content from '../../assets/Content.png'
 import { Title2 } from './Description/Title2'
 import { Desc2 } from './Description/Title2/Desc2'
+import classNames from 'classnames'
 
 const Content: FC = () => {
   return (
@@ -33,7 +34,7 @@ const Content: FC = () => {
             <Card />
           </section>
         </div>
-        <section className={styles.wallSection}>
+        <section className={classNames(styles.wallSection, styles.flexSection)}>
           <div className={styles.text}>
             <Title />
             <Description />

@@ -55,3 +55,13 @@
   text-align: center;
   margin-top: -107px;
 }
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 33px;
+  }
+
+  .span {
+    font-size: 33px;
+  }
+}
