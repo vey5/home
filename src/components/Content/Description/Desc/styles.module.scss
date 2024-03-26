@@ -30,3 +30,13 @@
     font-size: 22px;
   }
 }
+
+@media (max-width: 640px) {
+  .line {
+    left: 23%;
+  }
+
+  .avatar {
+    flex-direction: column;
+  }
+}

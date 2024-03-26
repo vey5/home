@@ -7,10 +7,12 @@ import face from '../../../assets/Face.png'
 const Avatar: FC = () => {
   return (
     <Stack className={styles.avatar} direction="row" spacing={3}>
-      <MaterialAvatar className={styles.img} alt="Remy Sharp" src={face} />
-      <div className={styles.spanText}>
-        <span className={styles.spanTitle}>Lara Madrigal</span>
-        <span className={styles.subTitle}>Client</span>
+      <div className={styles.content}>
+        <MaterialAvatar className={styles.img} alt="Remy Sharp" src={face} />
+        <div className={styles.spanText}>
+          <span className={styles.spanTitle}>Lara Madrigal</span>
+          <span className={styles.subTitle}>Client</span>
+        </div>
       </div>
       <div className={styles.container}>
         <MaterialAvatar className={styles.img} alt="Travis Howard" src={face} />
@@ -19,10 +21,12 @@ const Avatar: FC = () => {
           <span className={styles.subTitle}>Client</span>
         </div>
       </div>
-      <MaterialAvatar className={styles.img} alt="Cindy Baker" src={face} />
-      <div className={styles.spanText}>
-        <span className={styles.spanTitle}>Lara Madrigal</span>
-        <span className={styles.subTitle}>Client</span>
+      <div className={styles.content}>
+        <MaterialAvatar className={styles.img} alt="Cindy Baker" src={face} />
+        <div className={styles.spanText}>
+          <span className={styles.spanTitle}>Lara Madrigal</span>
+          <span className={styles.subTitle}>Client</span>
+        </div>
       </div>
     </Stack>
   )

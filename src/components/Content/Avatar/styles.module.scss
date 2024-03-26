@@ -35,6 +35,11 @@
   height: 49px;
 }
 
+.content {
+  display: flex;
+  gap: 20px;
+}
+
 .container {
   display: flex;
   gap: 20px;
@@ -49,5 +54,22 @@
 @media (max-width: 1024px) {
   .avatar {
     margin-left: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .avatar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
   }
 }

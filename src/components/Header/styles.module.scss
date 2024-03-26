@@ -41,17 +41,6 @@
 }
 
 @media (max-width: 1024px) {
-  .navItem {
-    font-size: 12px;
-  }
-
-  .fixed {
-    padding: 0 16px;
-    min-height: 100px;
-  }
-}
-
-@media (max-width: 1024px) {
   .img {
     height: 15px;
   }
@@ -62,5 +51,21 @@
 
   .navItem {
     font-size: 12px;
+  }
+
+  .fixed {
+    padding: 0 16px;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navBar {
+    padding-left: 20px;
+  }
+
+  .img {
+    padding-right: 50px;
+    height: 13px;
   }
 }
