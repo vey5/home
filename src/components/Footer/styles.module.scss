@@ -65,3 +65,23 @@
     font-size: 33px;
   }
 }
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .span {
+    margin-right: 50px;
+    font-size: 25px;
+  }
+
+  .columnLink {
+    display: flex;
+    gap: 40px;
+  }
+
+  .img {
+    height: 13px;
+  }
+}
