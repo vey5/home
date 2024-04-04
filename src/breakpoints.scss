@@ -1,0 +1,14 @@
+$breakpoints: (
+  xs: 450,
+  sm: 600,
+  md: 900,
+  lg: 1200,
+  xl: 1536,
+);
+
+@mixin breakpoint($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  @media (max-width: ($breakpoint-value)) {
+    @content;
+  }
+}
