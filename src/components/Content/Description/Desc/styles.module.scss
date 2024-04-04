@@ -1,3 +1,5 @@
+@import '/src/breakpoints.scss';
+
 .text {
   max-width: 336px;
   display: flex;
@@ -25,13 +27,13 @@
   left: 35%;
 }
 
-@media (max-width: 1024px) {
+@include breakpoint(md) {
   .text {
     font-size: 22px;
   }
 }
 
-@media (max-width: 640px) {
+@include breakpoint(sm) {
   .line {
     left: 23%;
   }

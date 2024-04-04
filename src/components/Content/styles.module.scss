@@ -1,3 +1,5 @@
+@import '/src/breakpoints.scss';
+
 .wallCard {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +71,7 @@
   min-height: 630px;
 }
 
-@media (max-width: 1024px) {
+@include breakpoint(md) {
   .wallSection {
     flex-direction: column;
     align-items: center;

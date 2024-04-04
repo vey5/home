@@ -1,3 +1,5 @@
+@import '/src/breakpoints.scss';
+
 .wallLink {
   display: flex;
   text-align: center;
@@ -40,13 +42,13 @@
   font-weight: 700;
 }
 
-@media (max-width: 630px) {
+@include breakpoint(sm) {
   .cardTitle {
     font-size: 15px;
   }
 }
 
-@media (max-width: 450px) {
+@include breakpoint(xs) {
   .span {
     font-size: 13px;
   }

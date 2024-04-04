@@ -1,3 +1,5 @@
+@import '/src/breakpoints.scss';
+
 .navBar {
   padding-left: 15px;
   padding-right: 15px;
@@ -44,8 +46,31 @@
   display: none;
 }
 
-@media (max-width: 1024px) {
+@include breakpoint(lg) {
+  // .img {
+  //   height: 15px;
+  // }
+
+  // .navList {
+  //   gap: 30px;
+  // }
+
+  // .navItem {
+  //   font-size: 12px;
+  // }
+
+  // .fixed {
+  //   padding: 0 16px;
+  //   min-height: 100px;
+  // }
+}
+
+@include breakpoint(md) {
   .img {
+    height: 15px;
+  }
+
+  .logo {
     height: 15px;
   }
 
@@ -63,7 +88,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@include breakpoint(sm) {
   .navBar {
     padding-left: 20px;
   }

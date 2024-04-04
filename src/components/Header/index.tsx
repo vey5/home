@@ -5,7 +5,6 @@ import { LogoIcon } from '../../assets/LogoIcon'
 import shape from '../../assets/Shape.png'
 import { Button } from '../UI/Button'
 import classNames from 'classnames'
-import MenuOpen from '@mui/icons-material/MenuOpen'
 
 const Header: FC = () => {
   const [offset, setOffset] = useState(false)
@@ -24,8 +23,8 @@ const Header: FC = () => {
     <div className={offset ? classNames(styles.navBar, styles.fixed) : styles.navBar}>
       {/* <div className={styles.logo}> */}
       <LogoIcon />
-      <img className={styles.img} src={shape} alt="logo" />
       {/* </div> */}
+      <img className={styles.img} src={shape} alt="logo" />
       <ul className={styles.navList}>
         <li className={styles.navLink}>
           <Link className={styles.navItem}>Nav Link</Link>

@@ -1,3 +1,5 @@
+@import '/src/breakpoints.scss';
+
 .text {
   font-size: 20px;
   font-weight: 400;
@@ -11,7 +13,7 @@
   margin-bottom: 16px;
 }
 
-@media (max-width: 1024px) {
+@include breakpoint(md) {
   .text {
     font-size: 19px;
   }

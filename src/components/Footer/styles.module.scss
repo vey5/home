@@ -1,3 +1,5 @@
+@import '/src/breakpoints.scss';
+
 .footBar {
   max-width: 1070px;
   margin: 0 auto;
@@ -56,7 +58,7 @@
   margin-top: -107px;
 }
 
-@media (max-width: 1024px) {
+@include breakpoint(md) {
   .title {
     font-size: 33px;
   }
@@ -66,7 +68,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@include breakpoint(sm) {
   .title {
     font-size: 25px;
   }
