@@ -6,7 +6,7 @@ import { LogoIcon } from '../../assets/LogoIcon'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import InstagramIcon from '@mui/icons-material/Instagram'
-import { ColumnDesc } from '../Content/Description/ColumnDesc'
+import { ColumnDesc } from '../../pages/Main/Description/ColumnDesc'
 
 const Footer: FC = () => {
   return (

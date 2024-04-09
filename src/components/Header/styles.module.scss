@@ -13,7 +13,9 @@
 
 .fixed {
   width: 100%;
-  background: linear-gradient(225deg, rgb(39, 26, 0) 37.091%, rgba(0, 0, 0, 0.98) 82.193%);
+  // background: linear-gradient(225deg, rgb(39, 26, 0) 37.091%, rgba(0, 0, 0, 0.98) 82.193%);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
   transition: 0.2s ease-in-out;
   padding-bottom: 15px;
   z-index: 7;

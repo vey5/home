@@ -1,9 +1,7 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
-import { Layout } from '../Layout'
 import { Title } from './Title'
 import { Description } from './Description'
-import { Button } from '../UI/Button'
 import { WallTitle } from './WallTitle'
 import { WallLink } from './WallLink'
 import { Card } from './Card'
@@ -13,8 +11,10 @@ import content from '../../assets/Content.png'
 import { Title2 } from './Description/Title2'
 import { Desc2 } from './Description/Title2/Desc2'
 import classNames from 'classnames'
+import { Layout } from '../../components/Layout'
+import { Button } from '@mui/material'
 
-const Content: FC = () => {
+const MainPage: FC = () => {
   return (
     <Layout>
       <main className={styles.main}>
@@ -58,4 +58,4 @@ const Content: FC = () => {
   )
 }
 
-export { Content }
+export { MainPage }

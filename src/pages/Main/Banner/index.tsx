@@ -1,6 +1,6 @@
-import { Header } from '../../Header'
 import styles from './styles.module.scss'
 import { FC } from 'react'
+import { Header } from '../../../components/Header'
 
 const Banner: FC = () => {
   return (

@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from 'react'
 import styles from './styles.module.scss'
 import { Footer } from '../Footer'
-import { Banner } from '../Content/Banner'
+import { Banner } from '../../pages/Main/Banner'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (

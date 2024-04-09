@@ -1,12 +1,13 @@
 import React from 'react'
 import './App.css'
-import { Content } from './components/Content'
+import { MainPage } from './pages/Main'
+
 // import { Layout } from './components/Layout'
 
 function App() {
   return (
     <div>
-      <Content />
+      <MainPage />
     </div>
   )
 }

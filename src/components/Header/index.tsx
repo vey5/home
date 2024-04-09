@@ -14,7 +14,7 @@ const Header: FC = () => {
   const [offset, setOffset] = useState(false)
 
   const offsetHeight = () => {
-    if (window.scrollY >= 982) {
+    if (window.scrollY >= 60) {
       setOffset(true)
     } else {
       setOffset(false)
