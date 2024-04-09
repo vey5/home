@@ -1,12 +1,16 @@
-import { Link } from '@mui/material'
+import { IconButton, Link, useMediaQuery, useTheme } from '@mui/material'
 import styles from './styles.module.scss'
 import { FC, useState } from 'react'
 import { LogoIcon } from '../../assets/LogoIcon'
 import shape from '../../assets/Shape.png'
 import { Button } from '../UI/Button'
 import classNames from 'classnames'
+import { TrendingFlat } from '@mui/icons-material'
 
 const Header: FC = () => {
+  const theme = useTheme()
+  const sm = useMediaQuery(theme.breakpoints.down('sm'))
+
   const [offset, setOffset] = useState(false)
 
   const offsetHeight = () => {
@@ -40,7 +44,16 @@ const Header: FC = () => {
         </li>
       </ul>
 
-      <Button />
+      {/* TODO: Пример адаптива через MUI theme */}
+      {/* {sm && <Button>Кнопка</Button>} */}
+
+      {sm ? (
+        <IconButton>
+          <TrendingFlat />
+        </IconButton>
+      ) : (
+        <Button>Кнопка</Button>
+      )}
     </div>
   )
 }

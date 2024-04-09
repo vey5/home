@@ -24,7 +24,7 @@ const Content: FC = () => {
           <div className={styles.text}>
             <Title />
             <Description />
-            <Button />
+            <Button>Кнопка</Button>
           </div>
         </section>
         <div className={styles.wallContainer}>
@@ -38,7 +38,7 @@ const Content: FC = () => {
           <div className={styles.text}>
             <Title />
             <Description />
-            <Button />
+            <Button>Кнопка</Button>
           </div>
           <img className={styles.contentImg2} src={content} alt="content" />
         </section>
@@ -46,7 +46,7 @@ const Content: FC = () => {
           <section className={styles.postSection}>
             <Title2 />
             <Desc2 />
-            <Button />
+            <Button>Кнопка</Button>
           </section>
         </div>
         <section className={styles.avatarSection}>

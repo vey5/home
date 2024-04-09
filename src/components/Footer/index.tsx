@@ -14,7 +14,7 @@ const Footer: FC = () => {
       <div className={styles.footText}>
         <h1 className={styles.title}>Make your dreams a</h1>
         <span className={styles.span}>reality</span>
-        <Button />
+        <Button>Кнопка</Button>
       </div>
       <div className={styles.logo}>
         <LogoIcon />
