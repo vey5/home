@@ -18,3 +18,9 @@
     font-size: 19px;
   }
 }
+
+@include breakpoint(sm) {
+  .text {
+    font-size: 17px;
+  }
+}

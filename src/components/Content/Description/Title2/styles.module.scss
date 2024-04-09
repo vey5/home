@@ -28,3 +28,9 @@
     font-size: 45px;
   }
 }
+
+@include breakpoint(sm) {
+  .desc {
+    font-size: 40px;
+  }
+}

@@ -26,3 +26,9 @@
     font-size: 45px;
   }
 }
+
+@include breakpoint(sm) {
+  .titleWall {
+    font-size: 40px;
+  }
+}

@@ -55,3 +55,9 @@
     padding: 0 16px;
   }
 }
+
+@include breakpoint(sm) {
+  .title {
+    font-size: 60px;
+  }
+}

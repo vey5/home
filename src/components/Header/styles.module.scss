@@ -46,24 +46,24 @@
   display: none;
 }
 
-@include breakpoint(lg) {
-  // .img {
-  //   height: 15px;
-  // }
+// @include breakpoint(lg) {
+//   // .img {
+//   //   height: 15px;
+//   // }
 
-  // .navList {
-  //   gap: 30px;
-  // }
+//   // .navList {
+//   //   gap: 30px;
+//   // }
 
-  // .navItem {
-  //   font-size: 12px;
-  // }
+//   // .navItem {
+//   //   font-size: 12px;
+//   // }
 
-  // .fixed {
-  //   padding: 0 16px;
-  //   min-height: 100px;
-  // }
-}
+//   // .fixed {
+//   //   padding: 0 16px;
+//   //   min-height: 100px;
+//   // }
+// }
 
 @include breakpoint(md) {
   .img {
