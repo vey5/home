@@ -4,6 +4,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @include breakpoint(md) {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 15px;
+  }
 }
 
 .spanText {
@@ -40,6 +46,11 @@
 .content {
   display: flex;
   gap: 20px;
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .container {
@@ -51,21 +62,8 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 50px !important;
-}
 
-@include breakpoint(md) {
-  .avatar {
-    flex-direction: column;
-    gap: 20px;
-    margin-left: 15px;
-  }
-
-  .content {
-    display: flex;
-    align-items: center;
-  }
-
-  .container {
+  @include breakpoint(md) {
     display: flex;
     align-items: center;
   }

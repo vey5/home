@@ -9,6 +9,10 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.6px;
+
+  @include breakpoint(md) {
+    font-size: 22px;
+  }
 }
 
 .post {
@@ -25,20 +29,8 @@
   position: absolute;
   top: -26%;
   left: 35%;
-}
 
-@include breakpoint(md) {
-  .text {
-    font-size: 22px;
-  }
-}
-
-@include breakpoint(sm) {
-  .line {
+  @include breakpoint(sm) {
     left: 23%;
-  }
-
-  .avatar {
-    flex-direction: column;
   }
 }

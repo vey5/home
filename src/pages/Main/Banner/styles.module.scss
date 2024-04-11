@@ -31,6 +31,15 @@
   letter-spacing: -2.01px;
   max-width: 519px;
   padding: 0 16px;
+
+  @include breakpoint(md) {
+    font-size: 72px;
+    padding: 0 16px;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 60px;
+  }
 }
 
 .desc {
@@ -42,22 +51,9 @@
   opacity: 0.6;
   max-width: 428px;
   padding: 0 16px;
-}
 
-@include breakpoint(md) {
-  .title {
-    font-size: 72px;
-    padding: 0 16px;
-  }
-
-  .desc {
+  @include breakpoint(md) {
     font-size: 18px;
     padding: 0 16px;
-  }
-}
-
-@include breakpoint(sm) {
-  .title {
-    font-size: 60px;
   }
 }

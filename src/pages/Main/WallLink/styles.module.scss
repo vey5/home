@@ -40,16 +40,8 @@
 .span {
   font-size: 17px;
   font-weight: 700;
-}
 
-@include breakpoint(sm) {
-  .cardTitle {
-    font-size: 15px;
-  }
-}
-
-@include breakpoint(xs) {
-  .span {
+  @include breakpoint(xs) {
     font-size: 13px;
   }
 }
