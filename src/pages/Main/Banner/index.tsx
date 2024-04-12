@@ -5,9 +5,7 @@ import { Header } from '../../../components/Header'
 const Banner: FC = () => {
   return (
     <div className={styles.banner}>
-      <div className={styles.header}>
-        <Header />
-      </div>
+      <Header />
       <div className={styles.sectionHeader}>
         <h1 className={styles.title}>Beautiful homes made for you</h1>
         <p className={styles.desc}>
