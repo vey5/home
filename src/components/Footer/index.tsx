@@ -7,28 +7,45 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { ColumnDesc } from '../../pages/Main/Description/ColumnDesc'
+import { useTheme, useMediaQuery, IconButton } from '@mui/material'
+import { IosShare } from '@mui/icons-material'
 
 const Footer: FC = () => {
+  const theme = useTheme()
+  const sm = useMediaQuery(theme.breakpoints.down('sm'))
+
   return (
     <div className={styles.footBar}>
-      <div className={styles.footText}>
-        <h1 className={styles.title}>Make your dreams a</h1>
-        <span className={styles.span}>reality</span>
-        <Button>Work with us</Button>
+      <div className={styles.footMain}>
+        <div className={styles.footText}>
+          <h1 className={styles.title}>Make your dreams a</h1>
+          <h1 className={styles.span}>reality</h1>
+        </div>
+        {sm ? (
+          <IconButton>
+            <IosShare className={styles.iosBtn} />
+          </IconButton>
+        ) : (
+          <Button>Work with us</Button>
+        )}
       </div>
-      <div className={styles.logo}>
-        <LogoIcon />
-        <img className={styles.img} src={shape} alt="logo" />
-      </div>
-      <div className={styles.social}>
-        <FacebookIcon />
-        <TwitterIcon />
-        <InstagramIcon />
-      </div>
-      <div className={styles.columnLink}>
-        <ColumnDesc />
-        <ColumnDesc />
-        <ColumnDesc />
+      <div className={styles.footLink}>
+        <div className={styles.footLogo}>
+          <div className={styles.logo}>
+            <LogoIcon />
+            <img className={styles.img} src={shape} alt="logo" />
+          </div>
+          <div className={styles.social}>
+            <FacebookIcon />
+            <TwitterIcon />
+            <InstagramIcon />
+          </div>
+        </div>
+        <div className={styles.columnLink}>
+          <ColumnDesc />
+          <ColumnDesc />
+          <ColumnDesc />
+        </div>
       </div>
     </div>
   )

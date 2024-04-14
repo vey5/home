@@ -6,13 +6,28 @@
   padding: 0 16px;
 }
 
+.footMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.2);
+  padding-bottom: 40px;
+  padding-top: 80px;
+}
+
 .footText {
   display: flex;
   align-items: center;
   gap: 14px;
-  border-bottom: 1px solid rgb(128, 128, 128, 0.2);
-  padding-bottom: 40px;
-  padding-top: 80px;
+}
+
+.footBtn {
+  display: flex;
+}
+
+.iosBtn {
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
 }
 
 .title {
@@ -29,8 +44,12 @@
   @include breakpoint(sm) {
     font-size: 25px;
   }
-}
 
+  @include breakpoint(xs) {
+    font-size: 20px;
+  }
+}
+// TODO: на span sm непонятный маржин скрывает кнопку с контейнера
 .span {
   color: rgb(255, 172, 18);
   font-size: 42px;
@@ -47,14 +66,16 @@
     margin-right: 50px;
     font-size: 25px;
   }
+
+  @include breakpoint(xs) {
+    font-size: 20px;
+  }
 }
 
 .logo {
-  margin-top: 68px;
   display: flex;
   align-items: center;
   gap: 9.6px;
-  margin-bottom: 34px;
 }
 
 .img {
@@ -69,17 +90,40 @@
   display: flex;
   gap: 28px;
   color: #fff;
+
+  @include breakpoint(sm) {
+    gap: 20px;
+  }
+
+  @include breakpoint(xs) {
+    gap: 16px;
+  }
 }
 
 .columnLink {
   display: flex;
   justify-content: end;
-  gap: 159px;
+  gap: 121px;
   text-align: center;
-  margin-top: -107px;
 
   @include breakpoint(sm) {
-    display: flex;
-    gap: 40px;
+    gap: 20px;
   }
+
+  @include breakpoint(xs) {
+    gap: 2px;
+  }
+}
+
+.footLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.footLogo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
