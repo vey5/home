@@ -1,20 +1,18 @@
 import { FC, PropsWithChildren } from 'react'
 import styles from './styles.module.scss'
-import TrendingFlat from '@mui/icons-material/TrendingFlat'
-import { Button as MaterialButton } from '@mui/material'
+import { Button as MaterialButton, ButtonOwnProps } from '@mui/material'
+import classNames from 'classnames'
 
-// type Props = {
-//   variant?: 'dark' | 'light'
-// }
+type Props = {
+  variant?: 'dark' | 'light' | 'something'
+} & Omit<ButtonOwnProps, 'variant'>
 
-const Button: FC<PropsWithChildren> = ({ children }) => {
+const Button: FC<PropsWithChildren<Props>> = ({ children, variant = 'light', ...props }) => {
   return (
-    // TODO: на остальных кнопках остался только текст
-    // <div className={styles.button}>
-    <MaterialButton endIcon={<TrendingFlat className={styles.endArrow} />} className={styles.btn}>
+    // TODO: Запилить кнопульку с возможностью кастомизации
+    <MaterialButton className={classNames(styles.btn, variant && styles[variant])} {...props}>
       {children}
     </MaterialButton>
-    // </div>
   )
 }
 

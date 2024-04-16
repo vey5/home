@@ -4,7 +4,6 @@
   border-radius: 20px;
   box-shadow: 0px 32px 34px 0px rgba(0, 0, 0, 0.13);
 
-  // TODO: Отрефакторить стили медиа запросов по проекту как здесь
   @include breakpoint(md) {
     max-width: 250px;
   }

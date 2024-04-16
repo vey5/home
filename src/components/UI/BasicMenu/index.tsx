@@ -1,10 +1,12 @@
 import { FC } from 'react'
 import styles from './styles.module.scss'
 import * as React from 'react'
-import Button from '@mui/material/Button'
+
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import MenuOpen from '@mui/icons-material/MenuOpen'
+import MenuIcon from '@mui/icons-material/Menu'
+import { IconButton } from '@mui/material'
 
 const BasicMenu: FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -17,15 +19,15 @@ const BasicMenu: FC = () => {
   }
 
   return (
-    <div>
-      <Button
+    <>
+      <IconButton
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}>
-        <MenuOpen className={styles.menu} />
-      </Button>
+        {open ? <MenuOpen className={styles.menu} /> : <MenuIcon className={styles.menu} />}
+      </IconButton>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -39,7 +41,7 @@ const BasicMenu: FC = () => {
         <MenuItem onClick={handleClose}>Nav Link</MenuItem>
         <MenuItem onClick={handleClose}>Nav Link</MenuItem>
       </Menu>
-    </div>
+    </>
   )
 }
 
