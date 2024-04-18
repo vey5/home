@@ -1,40 +1,38 @@
 @import '/src/breakpoints.scss';
 
-.card {
-  border-radius: 20px;
+.wallCard {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px 25px 25px 25px;
   box-shadow: 0px 32px 34px 0px rgba(0, 0, 0, 0.13);
 }
 
-.wallCard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 31px;
+.img {
+  border-radius: 25px 25px 0px 0px;
+  width: 336px;
+  height: 266px;
 }
 
 .title {
   font-size: 24px;
   font-weight: 700;
-  padding-top: 15px;
-  padding-left: 20px;
+  padding: 30px;
 }
 
-.icons {
+.iconSvg {
   display: flex;
-  justify-content: space-between;
-  padding-left: 28px;
-  padding-right: 42px;
+  justify-content: center;
+  gap: 76px;
+  padding: 20px;
 }
 
-.Icon {
+.icon {
   display: flex;
-  align-items: center;
-  color: black;
-  font-weight: 700;
   gap: 9px;
 }
 
-.num {
+.iconNum {
   font-size: 17px;
   font-weight: 700;
 }
