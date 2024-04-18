@@ -11,6 +11,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 31px;
+
+  @include breakpoint(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .wallSection {
