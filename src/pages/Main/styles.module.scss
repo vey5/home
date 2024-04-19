@@ -24,11 +24,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 31px;
-
-  // @include breakpoint(md) {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  // }
 }
 
 .contentImg {
@@ -44,9 +39,9 @@
 
 .wallContainer {
   background-color: rgb(245, 245, 245);
-  height: 1717px;
-  padding-top: 138px;
-  margin-top: -138px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 222px;
 }
 
 .wallPlace {
