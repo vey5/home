@@ -87,3 +87,28 @@
     flex-direction: column-reverse;
   }
 }
+
+.orangeArrow {
+  color: rgb(255, 172, 18);
+}
+
+.whiteArrow {
+  color: rgb(255, 255, 255);
+}
+
+.background {
+  border-radius: 0px 18px 0px 0px;
+  width: fit-content;
+  min-width: 209px;
+  height: 70px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 25px;
+}
+
+.foot {
+  background-color: rgb(255, 172, 18);
+  color: rgb(0, 0, 0);
+}

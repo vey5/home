@@ -13,6 +13,7 @@ import { Desc2 } from './Description/Title2/Desc2'
 import classNames from 'classnames'
 import { Layout } from '../../components/Layout'
 import { Button } from '@mui/material'
+import { TrendingFlat } from '@mui/icons-material'
 
 const MainPage: FC = () => {
   const сards = [
@@ -68,7 +69,11 @@ const MainPage: FC = () => {
           <div className={styles.text}>
             <Title />
             <Description />
-            <Button>Learn more</Button>
+            <Button
+              className={styles.background}
+              endIcon={<TrendingFlat className={styles.orangeArrow} />}>
+              Learn more
+            </Button>
           </div>
         </section>
         <div className={styles.wallContainer}>
@@ -93,7 +98,11 @@ const MainPage: FC = () => {
           <div className={styles.text}>
             <Title />
             <Description />
-            <Button>Learn more</Button>
+            <Button
+              className={styles.background}
+              endIcon={<TrendingFlat className={styles.orangeArrow} />}>
+              Learn more
+            </Button>
           </div>
           <img className={styles.contentImg2} src={content} alt="content" />
         </section>
@@ -101,7 +110,11 @@ const MainPage: FC = () => {
           <section className={styles.postSection}>
             <Title2 />
             <Desc2 />
-            <Button>Learn more</Button>
+            <Button
+              className={classNames(styles.background, styles.foot)}
+              endIcon={<TrendingFlat className={styles.whiteArrow} />}>
+              Learn more
+            </Button>
           </section>
         </div>
         <section className={styles.avatarSection}>

@@ -5,6 +5,7 @@ import classNames from 'classnames'
 
 const WallLink: FC = () => {
   return (
+    // TODO: мб нужно объединить card c card2?
     <div className={styles.wallLink}>
       <div className={styles.card}>
         <span className={styles.span}>Looking for</span>

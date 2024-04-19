@@ -8,7 +8,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { ColumnDesc } from '../../pages/Main/Description/ColumnDesc'
 import { useTheme, useMediaQuery, IconButton } from '@mui/material'
-import { IosShare } from '@mui/icons-material'
+import { IosShare, TrendingFlat } from '@mui/icons-material'
 
 const Footer: FC = () => {
   const theme = useTheme()
@@ -26,7 +26,7 @@ const Footer: FC = () => {
             <IosShare className={styles.iosBtn} />
           </IconButton>
         ) : (
-          <Button>Work with us</Button>
+          <Button endIcon={<TrendingFlat className={styles.whiteArrow} />}>Work with us</Button>
         )}
       </div>
       <div className={styles.footLink}>
