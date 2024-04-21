@@ -29,12 +29,20 @@
 .contentImg {
   width: 704px;
   height: 657px;
+
+  @include breakpoint(xs) {
+    width: 480px;
+  }
 }
 
 .contentImg2 {
   width: 704px;
   height: 657px;
   border-radius: 57px 0px 0px 0px;
+
+  @include breakpoint(xs) {
+    width: 480px;
+  }
 }
 
 .wallContainer {
