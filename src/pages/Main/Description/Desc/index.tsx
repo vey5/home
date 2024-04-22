@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
 
+// TODO: опять дублирование компонента
 const Desc: FC = () => {
   return (
     <div className={styles.post}>

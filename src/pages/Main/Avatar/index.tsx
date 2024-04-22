@@ -4,6 +4,7 @@ import { Avatar as MaterialAvatar } from '@mui/material'
 import Stack from '@mui/material/Stack'
 import face from '../../../assets/Face.png'
 
+// TODO: вместо трех аватаров сделать один, и выводить их в цикле в том месте где нужно, кидая в них данные пропсами
 const Avatar: FC = () => {
   return (
     <Stack className={styles.avatar} direction="row" spacing={3}>

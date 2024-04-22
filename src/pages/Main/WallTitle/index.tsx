@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
 
+// TODO нужно выпилить и заменить на общий title
 const WallTitle: FC = () => {
   return (
     <div className={styles.title}>

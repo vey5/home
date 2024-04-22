@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
 
+// TODO: похоже компонент не используется, надо дропнуть
 const HeaderSection: FC = () => {
   return (
     <div className={styles.sectionHeader}>

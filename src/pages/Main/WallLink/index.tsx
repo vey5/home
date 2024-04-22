@@ -6,6 +6,8 @@ import classNames from 'classnames'
 const WallLink: FC = () => {
   return (
     // TODO: мб нужно объединить card c card2?
+    // TODO: много лишних стилей. Нужно просто задать border-radius и overflow hidden для класса wallLink.
+    // И тогда всех его детей красиво обрежет и без лишних стилей
     <div className={styles.wallLink}>
       <div className={styles.card}>
         <span className={styles.span}>Looking for</span>

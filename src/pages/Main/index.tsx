@@ -16,6 +16,7 @@ import { Button } from '@mui/material'
 import { TrendingFlat } from '@mui/icons-material'
 
 const MainPage: FC = () => {
+  // TODO: массив можно вынести за пределы компонента, чтобы не пересоздавать его при каждом рендере заново
   const сards = [
     {
       title: 'Malto House',
@@ -88,9 +89,25 @@ const MainPage: FC = () => {
                   param1={item.param1}
                   param2={item.param2}
                   param3={item.param3}
+                  // TODO: key должен быть уникальной строкой, title может повториться. Лучше использоваться id для этого
                   key={item.title}
                 />
               ))}
+              {/* TODO: пример деструктуризации при прокидывании пропсов */}
+              {/* {сards.map(({ title, img, param1, param2, param3 }) => (
+                <Card
+                  title={title}
+                  img={img}
+                  param1={param1}
+                  param2={param2}
+                  param3={param3}
+                  key={title}
+                />
+              ))} */}
+              {/* TODO: пример использования spread оператора при прокидываниии пропсов, для сокращения кода */}
+              {/* {сards.map((item) => (
+                <Card key={item.title} {...item} />
+              ))} */}
             </div>
           </section>
         </div>

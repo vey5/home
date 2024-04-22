@@ -42,6 +42,7 @@ const Footer: FC = () => {
           </div>
         </div>
         <div className={styles.columnLink}>
+          {/* ColumnDesc выглядит как избыточный компонент, я бы его убрал и все заверстал прям в футере */}
           <ColumnDesc />
           <ColumnDesc />
           <ColumnDesc />

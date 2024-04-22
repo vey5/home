@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
 
+// TODO: убрать
 const Desc2: FC = () => {
   return (
     <div className={styles.desc}>
