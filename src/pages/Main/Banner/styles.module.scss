@@ -16,37 +16,37 @@
   margin: 0 auto;
 }
 
-.title {
-  color: rgb(255, 255, 255);
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 80px;
-  letter-spacing: -2.01px;
-  max-width: 519px;
-  padding: 0 16px;
+// .title {
+//   color: rgb(255, 255, 255);
+//   font-size: 80px;
+//   font-weight: 700;
+//   line-height: 80px;
+//   letter-spacing: -2.01px;
+//   max-width: 519px;
+//   padding: 0 16px;
 
-  @include breakpoint(md) {
-    font-size: 72px;
-    padding: 0 16px;
-  }
+//   @include breakpoint(md) {
+//     font-size: 72px;
+//     padding: 0 16px;
+//   }
 
-  @include breakpoint(sm) {
-    font-size: 60px;
-  }
-}
+//   @include breakpoint(sm) {
+//     font-size: 60px;
+//   }
+// }
 
-.desc {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: -0.5px;
-  color: rgb(255, 255, 255);
-  opacity: 0.6;
-  max-width: 428px;
-  padding: 0 16px;
+// .desc {
+//   font-size: 20px;
+//   font-weight: 400;
+//   line-height: 28px;
+//   letter-spacing: -0.5px;
+//   color: rgb(255, 255, 255);
+//   opacity: 0.6;
+//   max-width: 428px;
+//   padding: 0 16px;
 
-  @include breakpoint(md) {
-    font-size: 18px;
-    padding: 0 16px;
-  }
-}
+//   @include breakpoint(md) {
+//     font-size: 18px;
+//     padding: 0 16px;
+//   }
+// }

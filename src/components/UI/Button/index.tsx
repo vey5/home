@@ -17,7 +17,6 @@ const Button: FC<PropsWithChildren<Props>> = ({
   ...props
 }) => {
   return (
-    // TODO: Запилить кнопульку с возможностью кастомизации
     <MaterialButton className={classNames(styles.btn, variant && styles[variant])} {...props}>
       {children}
     </MaterialButton>

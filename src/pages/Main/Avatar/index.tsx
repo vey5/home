@@ -4,32 +4,23 @@ import { Avatar as MaterialAvatar } from '@mui/material'
 import Stack from '@mui/material/Stack'
 import face from '../../../assets/Face.png'
 
+type Props = {
+  param1: string
+  param2: string
+}
+
 // TODO: вместо трех аватаров сделать один, и выводить их в цикле в том месте где нужно, кидая в них данные пропсами
-const Avatar: FC = () => {
+const Avatar: FC<Props> = ({ param1, param2 }) => {
   return (
-    <Stack className={styles.avatar} direction="row" spacing={3}>
-      <div className={styles.content}>
+    <div className={styles.content}>
+      <Stack className={styles.avatar} direction="row" spacing={3}>
         <MaterialAvatar className={styles.img} alt="Remy Sharp" src={face} />
         <div className={styles.spanText}>
-          <span className={styles.spanTitle}>Lara Madrigal</span>
-          <span className={styles.subTitle}>Client</span>
+          <span className={styles.spanTitle}>{param1}</span>
+          <span className={styles.subTitle}>{param2}</span>
         </div>
-      </div>
-      <div className={styles.container}>
-        <MaterialAvatar className={styles.img} alt="Travis Howard" src={face} />
-        <div className={styles.spanText}>
-          <span className={styles.whiteTitle}>Lara Madrigal</span>
-          <span className={styles.subTitle}>Client</span>
-        </div>
-      </div>
-      <div className={styles.content}>
-        <MaterialAvatar className={styles.img} alt="Cindy Baker" src={face} />
-        <div className={styles.spanText}>
-          <span className={styles.spanTitle}>Lara Madrigal</span>
-          <span className={styles.subTitle}>Client</span>
-        </div>
-      </div>
-    </Stack>
+      </Stack>
+    </div>
   )
 }
 
