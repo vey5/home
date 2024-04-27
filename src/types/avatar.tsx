@@ -17,3 +17,5 @@ const avatars = [
 ]
 
 export default avatars
+
+// TODO: папку types переименовать в mock-data или constants. Сложить в один файл constants.ts все константы. Константы именуются апперкейсом
