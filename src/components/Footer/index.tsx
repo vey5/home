@@ -1,4 +1,4 @@
-import { Button } from '../UI/Button'
+import { Button } from '../Button'
 import styles from './styles.module.scss'
 import { FC } from 'react'
 import shape from '../../assets/Shape.png'

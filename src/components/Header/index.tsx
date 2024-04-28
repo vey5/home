@@ -3,10 +3,10 @@ import styles from './styles.module.scss'
 import { FC, useState } from 'react'
 import { LogoIcon } from '../../assets/Icon/Logo'
 import shape from '../../assets/Shape.png'
-import { Button } from '../UI/Button'
+import { Button } from '../Button'
 import classNames from 'classnames'
 import IosShare from '@mui/icons-material/IosShare'
-import { BasicMenu } from '../UI/BasicMenu'
+import { BasicMenu } from '../BasicMenu'
 import { TrendingFlat } from '@mui/icons-material'
 
 const Header: FC = () => {

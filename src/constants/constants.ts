@@ -1,4 +1,22 @@
-const сards = [
+export const AVATARS = [
+  {
+    id: 'number',
+    param1: 'Lara Madrigal',
+    param2: 'Client',
+  },
+  {
+    id: 'number',
+    param1: 'Lara Madrigal',
+    param2: 'Client',
+  },
+  {
+    id: 'number',
+    param1: 'Lara Madrigal',
+    param2: 'Client',
+  },
+]
+
+export const CARDS = [
   {
     id: 'number',
     title: 'Malto House',
@@ -48,5 +66,3 @@ const сards = [
     img: 'https://www.quicklets.com.mt/web/uploads/property/52621/202006041642115ed908437b680.jpeg',
   },
 ]
-
-export default сards

@@ -7,14 +7,6 @@
   letter-spacing: -1.26px;
   color: rgb(0, 0, 0);
 
-  :before {
-    border-top: 4px solid;
-    width: 169px;
-    border-radius: 2px;
-    // background: linear-gradient(90deg, rgb(255, 172, 18), rgb(0, 0, 0) 94.964%);(не работает)
-    position: absolute;
-    top: -8%;
-  }
   @include breakpoint(md) {
     font-size: 45px;
   }
@@ -28,8 +20,39 @@
   }
 }
 
+.title::before {
+  border-top: 4px solid;
+  width: 169px;
+  border-radius: 2px;
+  // background: linear-gradient(90deg, rgb(255, 172, 18), rgb(0, 0, 0) 94.964%);(не работает)
+  position: absolute;
+  top: -8%;
+}
+
+// TODO: before так и не вывелся, одно из решений title в див и на него повесить
+
+.h1 {
+  max-width: 519px;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  padding: 0 16px;
+
+  @include breakpoint(md) {
+    font-size: 60px;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 50px;
+  }
+
+  @include breakpoint(xs) {
+    font-size: 30px;
+  }
+}
+
 .h3 {
   color: rgb(255, 255, 255);
+  margin-bottom: 20px;
 }
 
 .container {

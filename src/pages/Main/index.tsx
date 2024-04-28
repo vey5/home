@@ -1,18 +1,18 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
-import { Title } from './Title'
-import { Description } from './Description'
+import { Title } from '../../components/Title'
+import { Text } from '../../components/Text'
 import { WallLink } from './WallLink'
-import { Card } from './Card'
-import { Avatar } from './Avatar'
+import { Card } from '../../components/Card'
+import { Avatar } from '../../components/Avatar'
 import content from '../../assets/Content.png'
 import classNames from 'classnames'
 import { Layout } from '../../components/Layout'
 import { Button } from '@mui/material'
 import { TrendingFlat } from '@mui/icons-material'
 import { Banner } from './Banner'
-import сards from '../../types/cards'
-import avatars from '../../types/avatar'
+import { AVATARS } from '../../constants/constants'
+import { CARDS } from '../../constants/constants'
 
 const MainPage: FC = () => {
   return (
@@ -24,12 +24,12 @@ const MainPage: FC = () => {
           <img className={styles.contentImg} src={content} alt="content" />
           <div className={styles.text}>
             <Title h2>You’re in good hands</Title>
-            <Description>
+            <Text color="dark">
               Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem
               se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
-            </Description>
+            </Text>
             <Button
               className={styles.background}
               endIcon={<TrendingFlat className={styles.orangeArrow} />}>
@@ -42,7 +42,7 @@ const MainPage: FC = () => {
             <Title h2>Find your next place to live</Title>
             <WallLink />
             <div className={styles.container}>
-              {сards.map((item) => (
+              {CARDS.map((item) => (
                 <Card key={item.id} {...item} />
               ))}
             </div>
@@ -51,12 +51,12 @@ const MainPage: FC = () => {
         <section className={classNames(styles.wallSection, styles.flexSection)}>
           <div className={styles.text}>
             <Title h2>You’re in good hands</Title>
-            <Description>
+            <Text color="dark">
               Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem
               se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
-            </Description>
+            </Text>
             <Button
               className={styles.background}
               endIcon={<TrendingFlat className={styles.orangeArrow} />}>
@@ -67,13 +67,13 @@ const MainPage: FC = () => {
         </section>
         <div className={styles.postContainer}>
           <section className={styles.postSection}>
-            {<Title h2>You’re in good hands</Title>}
-            <Description>
+            {<Title h3>You’re in good hands</Title>}
+            <Text color="gray">
               Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem
               se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
-            </Description>
+            </Text>
             <Button
               className={classNames(styles.background, styles.foot)}
               endIcon={<TrendingFlat className={styles.whiteArrow} />}>
@@ -82,12 +82,12 @@ const MainPage: FC = () => {
           </section>
         </div>
         <section className={styles.avatarSection}>
-          <Description>
+          <Text color="black">
             “Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de
             quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
-          </Description>
+          </Text>
           <div className={styles.avatar}>
-            {avatars.map((item) => (
+            {AVATARS.map((item) => (
               <Avatar param1={item.param1} param2={item.param2} key={item.id} />
             ))}
           </div>
