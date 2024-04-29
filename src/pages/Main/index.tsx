@@ -19,7 +19,6 @@ const MainPage: FC = () => {
     <Layout>
       <Banner />
       <main className={styles.main}>
-        {/* <HeaderSection /> */}
         <section className={styles.wallSection}>
           <img className={styles.contentImg} src={content} alt="content" />
           <div className={styles.text}>

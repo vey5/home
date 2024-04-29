@@ -6,6 +6,9 @@ type Props = {
   color: 'dark' | 'gray' | 'black'
 }
 
+// TODO: нужно поработать над пропсой color - в стилях вижу стили только для black типа, остальные как будто бесполезные
+// А у нас как минимум два типа есть - это black и grey цвета
+
 const Text: FC<PropsWithChildren<Props>> = ({ children, color = 'dark' }) => {
   if (color === 'dark') {
     return <p className={styles.text}>{children}</p>

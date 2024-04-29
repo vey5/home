@@ -24,6 +24,7 @@ const Header: FC = () => {
   }
 
   window.addEventListener('scroll', offsetHeight)
+
   return (
     <div className={classNames(styles.header, offset && styles.fixedHeader)}>
       <div className={styles.navBar}>

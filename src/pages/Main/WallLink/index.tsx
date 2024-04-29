@@ -3,6 +3,10 @@ import { FC } from 'react'
 import CheckIcon from '@mui/icons-material/Check'
 import classNames from 'classnames'
 
+// TODO: тут со стилями border-radius до сих пор суета. Все делается просто
+// для wallLink border-radius: 25px и overflow: hidden, а у его детей убрать это свойство вообще
+// И тогда не нужны будут всякие cardSecondary классы
+
 const WallLink: FC = () => {
   return (
     <div className={styles.wallLink}>

@@ -13,6 +13,9 @@ const Footer: FC = () => {
   const theme = useTheme()
   const sm = useMediaQuery(theme.breakpoints.down('sm'))
 
+  // TODO: футер на мобилке выглядит так себе. Надо добавить адаптива чуть чуть
+  // Еще у тебя тут много заголовков, я бы их предложил заменить на компонент Title
+
   return (
     <div className={styles.footBar}>
       <div className={styles.footMain}>
@@ -41,7 +44,6 @@ const Footer: FC = () => {
           </div>
         </div>
         <div className={styles.columnLink}>
-          {/* ColumnDesc выглядит как избыточный компонент, я бы его убрал и все заверстал прям в футере */}
           <div className={styles.container}>
             <ul className={styles.footList}>
               <li className={styles.navLink}>

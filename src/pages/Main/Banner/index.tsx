@@ -3,7 +3,6 @@ import { Title } from '../../../components/Title'
 import styles from './styles.module.scss'
 import { FC } from 'react'
 
-// ТODO: текст и тайтл надо кидать пропсами в него
 const Banner: FC = () => {
   return (
     <div className={styles.banner}>

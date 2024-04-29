@@ -14,6 +14,7 @@ const Title: FC<PropsWithChildren<Props>> = ({ children, h1, h2, h3 }) => {
   }
 
   if (h2) {
+    // TODO: Тут не вижу стилей для H2 заголовка
     return <h2 className={styles.title}>{children}</h2>
   }
 
@@ -22,7 +23,6 @@ const Title: FC<PropsWithChildren<Props>> = ({ children, h1, h2, h3 }) => {
   }
 
   return null
-  // {/* <div className={styles.line}></div> */}
 }
 
 export { Title }

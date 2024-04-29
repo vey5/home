@@ -9,6 +9,10 @@ type Props = {
   variant?: 'dark' | 'light' | 'something'
 } & Omit<ButtonOwnProps, 'variant'>
 
+// TODO: Кнопка не доделана.
+// Нужно чтоб было 2 пропсы variant и size, этого хватит чтобы целиком управлять размерами и цветом кнопок
+// А пропсы background и foot лучше убрать
+
 const Button: FC<PropsWithChildren<Props>> = ({
   children,
   variant = 'light',
