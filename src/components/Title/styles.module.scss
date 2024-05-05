@@ -20,17 +20,6 @@
   }
 }
 
-.title::before {
-  border-top: 4px solid;
-  width: 169px;
-  border-radius: 2px;
-  // background: linear-gradient(90deg, rgb(255, 172, 18), rgb(0, 0, 0) 94.964%);(не работает)
-  position: absolute;
-  top: -8%;
-}
-
-// TODO: before так и не вывелся, одно из решений title в див и на него повесить
-
 .h1 {
   max-width: 519px;
   font-size: 80px;
@@ -59,11 +48,32 @@
   position: relative;
 }
 
-// .line {
-//   border-top: 4px solid;
-//   width: 169px;
-//   border-radius: 2px;
-//   // background: linear-gradient(90deg, rgb(255, 172, 18), rgb(0, 0, 0) 94.964%);(не работает)
-//   position: absolute;
-//   top: -8%;
-// }
+.h4 {
+  font-size: 42px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+
+  @include breakpoint(md) {
+    font-size: 33px;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 25px;
+  }
+
+  @include breakpoint(xs) {
+    font-size: 20px;
+  }
+}
+
+.h5 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: -1px;
+  letter-spacing: -0.38px;
+  color: rgb(255, 255, 255);
+
+  @include breakpoint(sm) {
+    font-size: 12px;
+  }
+}

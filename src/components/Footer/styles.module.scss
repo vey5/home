@@ -1,5 +1,10 @@
 @import '/src/breakpoints.scss';
 
+.footContainer {
+  background: linear-gradient(225deg, rgb(39, 26, 0) 37.091%, rgba(0, 0, 0, 0.98) 82.193%);
+  height: 551px;
+}
+
 .footBar {
   max-width: 1070px;
   margin: 0 auto;
@@ -7,9 +12,6 @@
 }
 
 .footMain {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid rgb(128, 128, 128, 0.2);
   padding-bottom: 40px;
   padding-top: 80px;
@@ -17,37 +19,14 @@
 
 .footText {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 14px;
-}
-
-.footBtn {
-  display: flex;
 }
 
 .iosBtn {
   color: rgb(255, 255, 255);
   opacity: 0.8;
-}
-
-.title {
-  color: rgb(255, 255, 255);
-  font-size: 42px;
-  font-weight: 700;
-  line-height: -1px;
-  letter-spacing: -1.06px;
-
-  @include breakpoint(md) {
-    font-size: 33px;
-  }
-
-  @include breakpoint(sm) {
-    font-size: 25px;
-  }
-
-  @include breakpoint(xs) {
-    font-size: 20px;
-  }
 }
 
 .span {
@@ -56,7 +35,6 @@
   font-weight: 700;
   line-height: -1px;
   letter-spacing: -1.06px;
-  margin-right: 307px;
 
   @include breakpoint(md) {
     font-size: 33px;
@@ -83,6 +61,10 @@
   @include breakpoint(sm) {
     height: 13px;
   }
+
+  @include breakpoint(xs) {
+    height: 11px;
+  }
 }
 
 .social {
@@ -95,22 +77,22 @@
   }
 
   @include breakpoint(xs) {
-    gap: 16px;
+    gap: 10px;
   }
 }
 
 .columnLink {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   gap: 121px;
   text-align: center;
 
   @include breakpoint(sm) {
-    gap: 20px;
+    gap: 70px;
   }
 
   @include breakpoint(xs) {
-    gap: 2px;
+    gap: 15px;
   }
 }
 
@@ -119,6 +101,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 60px;
+  gap: 8px;
 }
 
 .footLogo {
@@ -129,10 +112,6 @@
 
 .whiteArrow {
   color: #fff;
-}
-
-.orange {
-  height: 50px;
 }
 
 .container {
@@ -163,17 +142,5 @@
 
   @include breakpoint(sm) {
     font-size: 13px;
-  }
-}
-
-.titleLink {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: -1px;
-  letter-spacing: -0.38px;
-  color: rgb(255, 255, 255);
-
-  @include breakpoint(sm) {
-    font-size: 12px;
   }
 }

@@ -8,7 +8,7 @@ import { Avatar } from '../../components/Avatar'
 import content from '../../assets/Content.png'
 import classNames from 'classnames'
 import { Layout } from '../../components/Layout'
-import { Button } from '@mui/material'
+import { Button } from '../../components/Button'
 import { TrendingFlat } from '@mui/icons-material'
 import { Banner } from './Banner'
 import { AVATARS } from '../../constants/constants'
@@ -29,9 +29,7 @@ const MainPage: FC = () => {
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
             </Text>
-            <Button
-              className={styles.background}
-              endIcon={<TrendingFlat className={styles.orangeArrow} />}>
+            <Button size="large" endIcon={<TrendingFlat className={styles.orangeArrow} />}>
               Learn more
             </Button>
           </div>
@@ -56,11 +54,7 @@ const MainPage: FC = () => {
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
             </Text>
-            <Button
-              className={styles.background}
-              endIcon={<TrendingFlat className={styles.orangeArrow} />}>
-              Learn more
-            </Button>
+            <Button endIcon={<TrendingFlat className={styles.orangeArrow} />}>Learn more</Button>
           </div>
           <img className={styles.contentImg2} src={content} alt="content" />
         </section>
@@ -73,18 +67,16 @@ const MainPage: FC = () => {
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
             </Text>
-            <Button
-              className={classNames(styles.background, styles.foot)}
-              endIcon={<TrendingFlat className={styles.whiteArrow} />}>
-              Learn more
-            </Button>
+            <Button endIcon={<TrendingFlat className={styles.whiteArrow} />}>Learn more</Button>
           </section>
         </div>
         <section className={styles.avatarSection}>
-          <Text color="black">
-            “Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de
-            quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
-          </Text>
+          <div className={styles.avatarText}>
+            <Text color="black">
+              “Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de
+              quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
+            </Text>
+          </div>
           <div className={styles.avatar}>
             {AVATARS.map((item) => (
               <Avatar param1={item.param1} param2={item.param2} key={item.id} />

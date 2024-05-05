@@ -4,24 +4,22 @@ import { Button as MaterialButton, ButtonOwnProps } from '@mui/material'
 import classNames from 'classnames'
 
 type Props = {
-  background?: 'dark'
-  foot?: 'orange'
+  size?: 'large' | 'medium' | 'small'
   variant?: 'dark' | 'light' | 'something'
-} & Omit<ButtonOwnProps, 'variant'>
+} & Omit<ButtonOwnProps, 'variant, size'>
 
-// TODO: Кнопка не доделана.
-// Нужно чтоб было 2 пропсы variant и size, этого хватит чтобы целиком управлять размерами и цветом кнопок
-// А пропсы background и foot лучше убрать
+// TODO: Ошибка в пропсе variant при передаче ее в компонент
 
 const Button: FC<PropsWithChildren<Props>> = ({
   children,
-  variant = 'light',
-  background,
-  foot,
+  variant = 'dark',
+  size = 'large',
   ...props
 }) => {
   return (
-    <MaterialButton className={classNames(styles.btn, variant && styles[variant])} {...props}>
+    <MaterialButton
+      className={classNames(styles.btn, variant && styles[variant], size && styles[size])}
+      {...props}>
       {children}
     </MaterialButton>
   )

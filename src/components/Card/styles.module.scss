@@ -6,6 +6,10 @@
   background-color: rgb(255, 255, 255);
   border-radius: 25px 25px 25px 25px;
   box-shadow: 0px 32px 34px 0px rgba(0, 0, 0, 0.13);
+
+  @include breakpoint(xs) {
+    overflow: hidden;
+  }
 }
 
 .img {
@@ -26,9 +30,13 @@
 
 .iconSvg {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 76px;
   padding: 20px;
+
+  @include breakpoint(xs) {
+    gap: 27px;
+  }
 }
 
 .icon {

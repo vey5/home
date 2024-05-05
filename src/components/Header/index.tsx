@@ -57,9 +57,7 @@ const Header: FC = () => {
                   <Link className={styles.navItem}>Nav Link</Link>
                 </li>
               </ul>
-              <Button variant="dark" endIcon={<TrendingFlat className={styles.endArrow} />}>
-                Work with us
-              </Button>
+              <Button endIcon={<TrendingFlat className={styles.endArrow} />}>Work with us</Button>
             </>
           )}
         </div>

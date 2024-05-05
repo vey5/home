@@ -53,6 +53,10 @@
   @include breakpoint(sm) {
     height: 13px;
   }
+
+  @include breakpoint(xs) {
+    height: 11px;
+  }
 }
 
 .navLink {

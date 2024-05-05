@@ -19,34 +19,7 @@
   color: rgb(151, 151, 151);
 }
 
-.whiteTitle {
-  font-size: 15px;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  margin-bottom: 4px;
-}
-
 .img {
   width: 49px;
   height: 49px;
 }
-
-.content {
-  display: flex;
-  gap: 20px;
-}
-
-// .container {
-//   display: flex;
-//   gap: 20px;
-//   background: rgb(0, 0, 0);
-//   width: 336px;
-//   height: 141px;
-//   justify-content: flex-end;
-//   align-items: center;
-
-//   @include breakpoint(md) {
-//     display: flex;
-//     align-items: center;
-//   }
-// }

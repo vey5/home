@@ -3,11 +3,10 @@ import styles from './styles.module.scss'
 import { FC, PropsWithChildren } from 'react'
 
 type Props = {
-  color: 'dark' | 'gray' | 'black'
+  color?: 'dark' | 'gray' | 'black'
 }
 
-// TODO: нужно поработать над пропсой color - в стилях вижу стили только для black типа, остальные как будто бесполезные
-// А у нас как минимум два типа есть - это black и grey цвета
+// TODO: dark идет как дефолтный цвет, хз куда его девать
 
 const Text: FC<PropsWithChildren<Props>> = ({ children, color = 'dark' }) => {
   if (color === 'dark') {
@@ -15,7 +14,7 @@ const Text: FC<PropsWithChildren<Props>> = ({ children, color = 'dark' }) => {
   }
 
   if (color === 'gray') {
-    return <p className={classNames(styles.text, styles.p)}>{children}</p>
+    return <p className={classNames(styles.text, styles.gray)}>{children}</p>
   }
 
   if (color === 'black') {

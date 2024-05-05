@@ -8,98 +8,93 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { useTheme, useMediaQuery, IconButton, Link } from '@mui/material'
 import { IosShare, TrendingFlat } from '@mui/icons-material'
+import { Title } from '../Title'
 
 const Footer: FC = () => {
   const theme = useTheme()
   const sm = useMediaQuery(theme.breakpoints.down('sm'))
 
-  // TODO: футер на мобилке выглядит так себе. Надо добавить адаптива чуть чуть
-  // Еще у тебя тут много заголовков, я бы их предложил заменить на компонент Title
-
   return (
-    <div className={styles.footBar}>
-      <div className={styles.footMain}>
-        <div className={styles.footText}>
-          <h1 className={styles.title}>Make your dreams a</h1>
-          <h1 className={styles.span}>reality</h1>
-        </div>
-        {sm ? (
-          <IconButton>
-            <IosShare className={styles.iosBtn} />
-          </IconButton>
-        ) : (
-          <Button endIcon={<TrendingFlat className={styles.whiteArrow} />}>Work with us</Button>
-        )}
-      </div>
-      <div className={styles.footLink}>
-        <div className={styles.footLogo}>
-          <div className={styles.logo}>
-            <LogoIcon />
-            <img className={styles.img} src={shape} alt="logo" />
-          </div>
-          <div className={styles.social}>
-            <FacebookIcon />
-            <TwitterIcon />
-            <InstagramIcon />
+    <div className={styles.footContainer}>
+      <div className={styles.footBar}>
+        <div className={styles.footMain}>
+          <div className={styles.footText}>
+            <Title h4>
+              Make your dreams a <span className={styles.span}>reality</span>
+            </Title>
+            {sm ? (
+              <IconButton>
+                <IosShare className={styles.iosBtn} />
+              </IconButton>
+            ) : (
+              <Button endIcon={<TrendingFlat className={styles.whiteArrow} />}>Work with us</Button>
+            )}
           </div>
         </div>
-        <div className={styles.columnLink}>
-          <div className={styles.container}>
-            <ul className={styles.footList}>
-              <li className={styles.navLink}>
-                <h2 className={styles.titleLink}>Column Heading</h2>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-            </ul>
+        <div className={styles.footLink}>
+          <div className={styles.footLogo}>
+            <div className={styles.logo}>
+              <LogoIcon />
+              <img className={styles.img} src={shape} alt="logo" />
+            </div>
+            <div className={styles.social}>
+              <FacebookIcon />
+              <TwitterIcon />
+              <InstagramIcon />
+            </div>
           </div>
-          <div className={styles.container}>
-            <ul className={styles.footList}>
-              <li className={styles.navLink}>
-                <h2 className={styles.titleLink}>Column Heading</h2>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.container}>
-            <ul className={styles.footList}>
-              <li className={styles.navLink}>
-                <h2 className={styles.titleLink}>Column Heading</h2>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-              <li className={styles.navLink}>
-                <Link className={styles.navItem}>Link goes here</Link>
-              </li>
-            </ul>
+          <div className={styles.columnLink}>
+            <div className={styles.container}>
+              <ul className={styles.footList}>
+                <Title h5>Column Heading</Title>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.container}>
+              <ul className={styles.footList}>
+                <Title h5>Column Heading</Title>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.container}>
+              <ul className={styles.footList}>
+                <Title h5>Column Heading</Title>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+                <li className={styles.navLink}>
+                  <Link className={styles.navItem}>Link goes here</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

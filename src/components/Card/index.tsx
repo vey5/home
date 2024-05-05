@@ -12,7 +12,7 @@ type Props = {
   param3: number
   img: string
 }
-
+// TODO: тайтл внутри карточки, оставить или заменить на компонент тайтл?
 const Card: FC<Props> = ({ title, param1, param2, param3, img }) => {
   return (
     <div className={styles.wallCard}>
