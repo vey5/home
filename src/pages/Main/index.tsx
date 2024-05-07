@@ -21,22 +21,29 @@ const MainPage: FC = () => {
       <main className={styles.main}>
         <section className={styles.wallSection}>
           <img className={styles.contentImg} src={content} alt="content" />
-          <div className={styles.text}>
-            <Title h2>You’re in good hands</Title>
-            <Text color="dark">
+          <div className={styles.wrapper}>
+            <Title h2 color="black" className={styles.title}>
+              You’re in good hands
+            </Title>
+            <Text color="gray" className={styles.text}>
               Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem
               se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
             </Text>
-            <Button size="large" endIcon={<TrendingFlat className={styles.orangeArrow} />}>
+            <Button
+              size="large"
+              variant="dark"
+              endIcon={<TrendingFlat className={styles.orangeArrow} />}>
               Learn more
             </Button>
           </div>
         </section>
         <div className={styles.wallContainer}>
           <section className={styles.wallPlace}>
-            <Title h2>Find your next place to live</Title>
+            <Title h2 color="black" className={styles.title}>
+              Find your next place to live
+            </Title>
             <WallLink />
             <div className={styles.container}>
               {CARDS.map((item) => (
@@ -46,9 +53,11 @@ const MainPage: FC = () => {
           </section>
         </div>
         <section className={classNames(styles.wallSection, styles.flexSection)}>
-          <div className={styles.text}>
-            <Title h2>You’re in good hands</Title>
-            <Text color="dark">
+          <div className={styles.wrapper}>
+            <Title h2 color="black" className={styles.title}>
+              You’re in good hands
+            </Title>
+            <Text color="gray" className={styles.text}>
               Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem
               se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
@@ -60,19 +69,28 @@ const MainPage: FC = () => {
         </section>
         <div className={styles.postContainer}>
           <section className={styles.postSection}>
-            {<Title h3>You’re in good hands</Title>}
-            <Text color="gray">
+            {
+              <Title h2 color="white" className={styles.title}>
+                You’re in good hands
+              </Title>
+            }
+            <Text color="gray" className={styles.text}>
               Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem
               se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante
               itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
               accusantium doloremque.
             </Text>
-            <Button endIcon={<TrendingFlat className={styles.whiteArrow} />}>Learn more</Button>
+            <Button
+              variant="light"
+              size="large"
+              endIcon={<TrendingFlat className={styles.whiteArrow} />}>
+              Learn more
+            </Button>
           </section>
         </div>
         <section className={styles.avatarSection}>
           <div className={styles.avatarText}>
-            <Text color="black">
+            <Text color="black" className={styles.text}>
               “Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de
               quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
             </Text>

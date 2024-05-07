@@ -57,7 +57,12 @@ const Header: FC = () => {
                   <Link className={styles.navItem}>Nav Link</Link>
                 </li>
               </ul>
-              <Button endIcon={<TrendingFlat className={styles.endArrow} />}>Work with us</Button>
+              <Button
+                variant="light"
+                size="medium"
+                endIcon={<TrendingFlat className={styles.endArrow} />}>
+                Work with us
+              </Button>
             </>
           )}
         </div>

@@ -1,8 +1,6 @@
 .btn {
   border-radius: 0px 18px 0px 0px;
   width: fit-content;
-  min-width: 211px;
-  height: 50px;
   background-color: rgb(255, 172, 18);
   border: none;
   color: rgb(0, 0, 0);
@@ -15,15 +13,21 @@
 }
 
 .dark {
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .light {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 172, 18);
+  color: rgb(0, 0, 0);
 }
 
 .large {
   min-width: 209px;
   height: 70px;
+}
+
+.medium {
+  min-width: 211px;
+  height: 50px;
 }

@@ -19,7 +19,7 @@ const Footer: FC = () => {
       <div className={styles.footBar}>
         <div className={styles.footMain}>
           <div className={styles.footText}>
-            <Title h4>
+            <Title h3 color="white">
               Make your dreams a <span className={styles.span}>reality</span>
             </Title>
             {sm ? (
@@ -27,7 +27,12 @@ const Footer: FC = () => {
                 <IosShare className={styles.iosBtn} />
               </IconButton>
             ) : (
-              <Button endIcon={<TrendingFlat className={styles.whiteArrow} />}>Work with us</Button>
+              <Button
+                variant="light"
+                size="medium"
+                endIcon={<TrendingFlat className={styles.whiteArrow} />}>
+                Work with us
+              </Button>
             )}
           </div>
         </div>
@@ -46,7 +51,9 @@ const Footer: FC = () => {
           <div className={styles.columnLink}>
             <div className={styles.container}>
               <ul className={styles.footList}>
-                <Title h5>Column Heading</Title>
+                <Title h4 color="white">
+                  Column Heading
+                </Title>
                 <li className={styles.navLink}>
                   <Link className={styles.navItem}>Link goes here</Link>
                 </li>
@@ -63,7 +70,9 @@ const Footer: FC = () => {
             </div>
             <div className={styles.container}>
               <ul className={styles.footList}>
-                <Title h5>Column Heading</Title>
+                <Title h4 color="white">
+                  Column Heading
+                </Title>
                 <li className={styles.navLink}>
                   <Link className={styles.navItem}>Link goes here</Link>
                 </li>
@@ -80,7 +89,9 @@ const Footer: FC = () => {
             </div>
             <div className={styles.container}>
               <ul className={styles.footList}>
-                <Title h5>Column Heading</Title>
+                <Title h4 color="white">
+                  Column Heading
+                </Title>
                 <li className={styles.navLink}>
                   <Link className={styles.navItem}>Link goes here</Link>
                 </li>

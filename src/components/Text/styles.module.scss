@@ -3,10 +3,7 @@
 .text {
   font-size: 20px;
   font-weight: 400;
-  line-height: 28px;
-  letter-spacing: -0.5px;
-  color: rgb(0, 0, 0);
-  opacity: 0.6;
+  line-height: 23px;
 
   @include breakpoint(md) {
     font-size: 19px;
@@ -15,28 +12,20 @@
   @include breakpoint(xs) {
     font-size: 16px;
   }
+}
+
+.white {
+  color: rgb(255, 255, 255);
 }
 
 .gray {
-  max-width: 428px;
-  color: rgb(255, 255, 255);
-  padding: 0 16px;
-
-  @include breakpoint(md) {
-    font-size: 19px;
-  }
-
-  @include breakpoint(xs) {
-    font-size: 16px;
-  }
+  color: #a9a9a9;
 }
 
 .black {
-  max-width: 336px;
   color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 60px;
 
   @include breakpoint(md) {
     font-size: 19px;

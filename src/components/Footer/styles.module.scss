@@ -2,7 +2,6 @@
 
 .footContainer {
   background: linear-gradient(225deg, rgb(39, 26, 0) 37.091%, rgba(0, 0, 0, 0.98) 82.193%);
-  height: 551px;
 }
 
 .footBar {
@@ -92,7 +91,7 @@
   }
 
   @include breakpoint(xs) {
-    gap: 15px;
+    gap: 30px;
   }
 }
 
@@ -101,6 +100,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 60px;
+  padding-bottom: 150px;
   gap: 8px;
 }
 

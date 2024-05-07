@@ -4,11 +4,11 @@ import { Button as MaterialButton, ButtonOwnProps } from '@mui/material'
 import classNames from 'classnames'
 
 type Props = {
-  size?: 'large' | 'medium' | 'small'
-  variant?: 'dark' | 'light' | 'something'
-} & Omit<ButtonOwnProps, 'variant, size'>
+  size?: 'large' | 'medium'
+  variant?: 'dark' | 'light'
+} & Omit<ButtonOwnProps, 'variant' | 'size'>
 
-// TODO: Ошибка в пропсе variant при передаче ее в компонент
+// TODO: Допилить вариант сайз
 
 const Button: FC<PropsWithChildren<Props>> = ({
   children,

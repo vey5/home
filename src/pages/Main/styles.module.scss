@@ -29,20 +29,18 @@
 
 .contentImg {
   width: 704px;
-  height: 657px;
 
   @include breakpoint(xs) {
     width: 480px;
   }
 }
 
-.text {
-  max-width: 475px;
+.wrapper {
+  padding: 16px;
 }
 
 .contentImg2 {
   width: 704px;
-  height: 657px;
   border-radius: 57px 0px 0px 0px;
 
   @include breakpoint(xs) {
@@ -53,8 +51,8 @@
 .wallContainer {
   background-color: rgb(245, 245, 245);
   padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 222px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .wallPlace {
@@ -65,8 +63,6 @@
 
 .postContainer {
   background: linear-gradient(225deg, rgb(39, 26, 0) 32.003%, rgba(0, 0, 0, 0.98) 132.603%);
-  height: 674px;
-  margin-top: 150px;
 }
 
 .postSection {
@@ -74,25 +70,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 674px;
   max-width: 475px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 30px;
   text-align: center;
 }
 
 .avatarSection {
   max-width: 1070px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 630px;
+
+  @include breakpoint(xs) {
+    padding: 16px;
+  }
 }
 
 .avatar {
   display: flex;
+  padding-bottom: 100px;
 
   @include breakpoint(md) {
     flex-direction: column;
@@ -108,6 +107,11 @@
   max-width: 1070px;
   display: flex;
   justify-content: center;
+  padding-top: 100px;
+
+  @include breakpoint(xs) {
+    padding-top: 50px;
+  }
 }
 
 .orangeArrow {
@@ -122,4 +126,12 @@
   .flexSection {
     flex-direction: column-reverse;
   }
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+.text {
+  padding-bottom: 20px;
 }
