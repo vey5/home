@@ -5,6 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { StyledEngineProvider } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { BrowserRouter } from 'react-router-dom'
 
 const theme = createTheme({
   breakpoints: {
@@ -21,11 +22,13 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <StyledEngineProvider injectFirst>
-        <App />
-      </StyledEngineProvider>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <StyledEngineProvider injectFirst>
+          <App />
+        </StyledEngineProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 )
 

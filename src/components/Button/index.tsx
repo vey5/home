@@ -8,8 +8,6 @@ type Props = {
   variant?: 'dark' | 'light'
 } & Omit<ButtonOwnProps, 'variant' | 'size'>
 
-// TODO: Допилить вариант сайз
-
 const Button: FC<PropsWithChildren<Props>> = ({
   children,
   variant = 'dark',

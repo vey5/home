@@ -1,13 +1,16 @@
 import './App.css'
 import { MainPage } from './pages/Main'
-
-// TODO: убрать почти во всех блоках height и заменить на отступы
+import { Routes, Route } from 'react-router-dom'
+import { Cabinet } from './pages/Main/Cabinet'
 
 function App() {
   return (
-    <div>
-      <MainPage />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/cabinet" element={<Cabinet />} />
+      </Routes>
+    </>
   )
 }
 
