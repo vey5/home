@@ -1,4 +1,4 @@
-import { IconButton, Link, useMediaQuery, useTheme } from '@mui/material'
+import { IconButton, useMediaQuery, useTheme } from '@mui/material'
 import styles from './styles.module.scss'
 import { FC, useState } from 'react'
 import { LogoIcon } from '../../assets/Icon/Logo'
@@ -8,6 +8,7 @@ import classNames from 'classnames'
 import IosShare from '@mui/icons-material/IosShare'
 import { BasicMenu } from '../BasicMenu'
 import { TrendingFlat } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 const Header: FC = () => {
   const theme = useTheme()
@@ -45,16 +46,24 @@ const Header: FC = () => {
             <>
               <ul className={styles.navList}>
                 <li className={styles.navLink}>
-                  <Link className={styles.navItem}>Nav Link</Link>
+                  <Link className={styles.navItem} to={'/cabinet'}>
+                    Cabinet
+                  </Link>
                 </li>
                 <li className={styles.navLink}>
-                  <Link className={styles.navItem}>Nav Link</Link>
+                  <Link className={styles.navItem} to={''}>
+                    Nav Link
+                  </Link>
                 </li>
                 <li className={styles.navLink}>
-                  <Link className={styles.navItem}>Nav Link</Link>
+                  <Link className={styles.navItem} to={''}>
+                    Nav Link
+                  </Link>
                 </li>
                 <li className={styles.navLink}>
-                  <Link className={styles.navItem}>Nav Link</Link>
+                  <Link className={styles.navItem} to={''}>
+                    Nav Link
+                  </Link>
                 </li>
               </ul>
               <Button

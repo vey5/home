@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import styles from './styles.module.scss'
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
@@ -36,7 +37,9 @@ const BasicMenu: FC = () => {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}>
-        <MenuItem onClick={handleClose}>Nav Link</MenuItem>
+        <Link to={'/cabinet'}>
+          <MenuItem onClick={handleClose}>Cabinet</MenuItem>
+        </Link>
         <MenuItem onClick={handleClose}>Nav Link</MenuItem>
         <MenuItem onClick={handleClose}>Nav Link</MenuItem>
         <MenuItem onClick={handleClose}>Nav Link</MenuItem>
