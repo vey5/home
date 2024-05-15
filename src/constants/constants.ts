@@ -66,3 +66,5 @@ export const CARDS = [
     img: 'https://www.quicklets.com.mt/web/uploads/property/52621/202006041642115ed908437b680.jpeg',
   },
 ]
+
+export const USER = 'cabinet/user-info'
