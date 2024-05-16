@@ -1,22 +1,24 @@
 import styles from './styles.module.scss'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { Layout } from '../../components/Layout'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
-import { Form, SubmitHandler, useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 
-type inputs = {
+type Inputs = {
   firstname: string
   lastname: string
+  post: number
+  info: string
 }
 
 const Cabinet: FC = () => {
   const { pathname } = useLocation()
-  const { register, handleSubmit } = useForm<inputs>()
+  const { register, handleSubmit } = useForm<Inputs>()
 
-  const submit: SubmitHandler<inputs> = (data) => console.log(data)
+  const submit: SubmitHandler<Inputs> = (data) => console.log(data)
 
   return (
     <Layout>
@@ -52,11 +54,25 @@ const Cabinet: FC = () => {
         </Tabs>
       </div>
       {pathname === ROUTES_PATHS.userinfo && (
-        <Form onSubmit={handleSubmit(submit)}>
+        <form className={styles.form} onSubmit={handleSubmit(submit)}>
           <input placeholder="firstname" type="text" {...register('firstname')} />
           <input placeholder="lastname" type="text" {...register('lastname')} />
           <button>Отправить</button>
-        </Form>
+        </form>
+      )}
+      {pathname === ROUTES_PATHS.post && (
+        <form className={styles.form} onSubmit={handleSubmit(submit)}>
+          <input placeholder="post" type="text" {...register('post')} />
+          <input placeholder="info" type="text" {...register('info')} />
+          <button>Отправить</button>
+        </form>
+      )}
+      {pathname === ROUTES_PATHS.user && (
+        <form className={styles.form} onSubmit={handleSubmit(submit)}>
+          <input placeholder="firstname" type="text" {...register('firstname')} />
+          <input placeholder="lastname" type="text" {...register('lastname')} />
+          <button>Отправить</button>
+        </form>
       )}
     </Layout>
   )
