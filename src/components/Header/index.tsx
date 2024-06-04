@@ -46,7 +46,7 @@ const Header: FC = () => {
             <>
               <ul className={styles.navList}>
                 <li className={styles.navLink}>
-                  <Link className={styles.navItem} to={'/cabinet'}>
+                  <Link className={styles.navItem} to={'/cabinet/login'}>
                     Cabinet
                   </Link>
                 </li>

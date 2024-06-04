@@ -2,6 +2,7 @@ import './App.css'
 import { MainPage } from './pages/Main'
 import { Routes, Route } from 'react-router-dom'
 import { Cabinet } from './pages/Cabinet'
+import { Login } from './pages/Login'
 
 export enum ROUTES_PATHS {
   main = '/',
@@ -9,6 +10,7 @@ export enum ROUTES_PATHS {
   userinfo = '/cabinet/user-info',
   post = '/cabinet/post',
   user = '/cabinet/user',
+  login = '/cabinet/login',
 }
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route path={ROUTES_PATHS.post} />
           <Route path={ROUTES_PATHS.user} />
         </Route>
+        <Route path={ROUTES_PATHS.login} element={<Login />} />
       </Routes>
     </>
   )

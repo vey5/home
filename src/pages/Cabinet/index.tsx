@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab'
 import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { Login } from '../Login'
 
 type Inputs = {
   firstname: string
@@ -54,10 +55,14 @@ const Cabinet: FC = () => {
         </Tabs>
       </div>
       {pathname === ROUTES_PATHS.userinfo && (
-        <form className={styles.form} onSubmit={handleSubmit(submit)}>
-          <input placeholder="firstname" type="text" {...register('firstname')} />
-          <input placeholder="lastname" type="text" {...register('lastname')} />
-          <button>Отправить</button>
+        <form onSubmit={handleSubmit(submit)}>
+          <label className={styles.login}>
+            FirstName:
+            <input type="text" {...register('firstname')} />
+            LastName:
+            <input type="text" {...register('lastname')} />
+            <button>Отправить</button>
+          </label>
         </form>
       )}
       {pathname === ROUTES_PATHS.post && (
@@ -74,6 +79,7 @@ const Cabinet: FC = () => {
           <button>Отправить</button>
         </form>
       )}
+      {pathname === ROUTES_PATHS.login && <Login />}
     </Layout>
   )
 }
