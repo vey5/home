@@ -19,7 +19,7 @@ const Cabinet: FC = () => {
   const { pathname } = useLocation()
   const { register, handleSubmit } = useForm<Inputs>()
 
-  const submit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const submit: SubmitHandler<Inputs> = (data: any) => console.log(data)
 
   return (
     <Layout>
