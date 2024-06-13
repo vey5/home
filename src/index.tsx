@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals'
 import { StyledEngineProvider } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { BrowserRouter } from 'react-router-dom'
+import { SnackbarProvider } from 'notistack'
 
 const theme = createTheme({
   breakpoints: {
@@ -22,13 +23,15 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <StyledEngineProvider injectFirst>
-          <App />
-        </StyledEngineProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+    <SnackbarProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <StyledEngineProvider injectFirst>
+            <App />
+          </StyledEngineProvider>
+        </ThemeProvider>
+      </BrowserRouter>
+    </SnackbarProvider>
   </React.StrictMode>
 )
 
