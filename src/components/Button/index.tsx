@@ -4,8 +4,8 @@ import { Button as MaterialButton, ButtonOwnProps } from '@mui/material'
 import classNames from 'classnames'
 
 type Props = {
-  size?: 'large' | 'medium'
-  variant?: 'dark' | 'light'
+  size?: 'large' | 'medium' | 'form'
+  variant?: 'dark' | 'light' | 'gray'
 } & Omit<ButtonOwnProps, 'variant' | 'size'>
 
 const Button: FC<PropsWithChildren<Props>> = ({

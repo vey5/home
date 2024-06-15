@@ -1,16 +1,20 @@
 import styles from './styles.module.scss'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Cookie from 'js-cookie'
 import { useSnackbar } from 'notistack'
+import TextField from '@mui/material/TextField'
+import { Button } from '../../components/Button'
+import { IconButton } from '@mui/material'
 
 // type Props = {
 //   token?: string,
 // }
 
 const Login: FC = () => {
-  const { register, handleSubmit } = useForm()
+  const { handleSubmit } = useForm()
   const { enqueueSnackbar } = useSnackbar()
+  const [value, setValue] = useState('')
 
   const setCookie = (name: any, token: any) => {
     Cookie.set(name, token, {
@@ -26,14 +30,14 @@ const Login: FC = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        login: _data.username,
-        password: _data.password,
+        login: _data.value,
+        password: _data.value,
       }),
     })
       .then((res) => res.json())
       .then(
         (data) => {
-          setCookie('token', JSON.stringify(data.token))
+          setCookie('token', data.token)
           console.log('data', data)
         },
         (error) => {
@@ -48,17 +52,41 @@ const Login: FC = () => {
   return (
     <div className={styles.wrapper}>
       <form className={styles.form} onSubmit={handleSubmit(submit)}>
-        <label className={styles.login}>
+        <TextField
+          className={styles.input}
+          size="small"
+          required
+          fullWidth
+          id="outlined-basic"
+          label="login"
+          variant="outlined"
+        />
+        <TextField
+          className={styles.input}
+          size="small"
+          id="outlined-basic"
+          required
+          fullWidth
+          label="password"
+          variant="outlined"
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
+          error={!value}
+          helperText={!value ? 'Введите пароль' : 'Никому не сообщайте свой пароль'}
+        />
+        {/* <label className={styles.login}>
           Email
           <input type="text" {...register('username')} className={styles.input} />
         </label>
         <label className={styles.login}>
           Password
           <input type="text" {...register('password')} className={styles.input} />
-          <button type="submit" className={styles.btn}>
+        </label> */}
+        <IconButton type="submit">
+          <Button size="form" variant="gray">
             Login
-          </button>
-        </label>
+          </Button>
+        </IconButton>
       </form>
     </div>
   )
