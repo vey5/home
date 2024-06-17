@@ -56,40 +56,43 @@ const Login: FC = () => {
         <Controller
           name="login"
           control={control}
-          defaultValue="mor_2314"
+          rules={{ required: true }}
+          defaultValue=""
           render={({ field: { value, onChange } }) => (
             <Input
               className={styles.input}
               size="small"
-              required
               fullWidth
               id="outlined-basic"
               label="Login"
               variant="outlined"
               value={value}
+              error={!value}
               onChange={onChange}
+              helperText={!value && 'Введите логин'}
             />
           )}
         />
         <Controller
           name="password"
           control={control}
-          defaultValue="83r5^_"
+          rules={{ required: true }}
+          defaultValue=""
           render={({ field: { value, onChange } }) => (
             <Input
               className={styles.input}
               size="small"
-              required
               fullWidth
               id="outlined-basic"
               label="Password"
               variant="outlined"
               value={value}
+              error={!value}
               onChange={onChange}
+              helperText={!value ? 'Введите пароль' : 'Никому не сообщайте свой пароль'}
             />
           )}
         />
-
         <IconButton type="submit">
           <Button size="form" variant="gray">
             Login
