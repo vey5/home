@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import Cookie from 'js-cookie'
 import { useSnackbar } from 'notistack'
@@ -15,7 +15,6 @@ import { IconButton } from '@mui/material'
 const Login: FC = () => {
   const { handleSubmit, control } = useForm()
   const { enqueueSnackbar } = useSnackbar()
-  const [value, setValue] = useState('')
 
   const setCookie = (name: any, token: any) => {
     Cookie.set(name, token, {
@@ -27,12 +26,12 @@ const Login: FC = () => {
   }
 
   const submit = (_data: any) => {
-    fetch('https://fakestoreapi.com/auth/login', {
+    fetch(`${process.env}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        login: _data.login,
-        password: _data.password,
+        username: 'Vlad',
+        password: '1234',
       }),
     })
       .then((res) => res.json())
@@ -54,10 +53,10 @@ const Login: FC = () => {
     <div className={styles.wrapper}>
       <form className={styles.form} onSubmit={handleSubmit(submit)}>
         <Controller
-          name="login"
+          name="username"
           control={control}
           rules={{ required: true }}
-          defaultValue=""
+          defaultValue="Vlad"
           render={({ field: { value, onChange } }) => (
             <Input
               className={styles.input}
@@ -77,7 +76,7 @@ const Login: FC = () => {
           name="password"
           control={control}
           rules={{ required: true }}
-          defaultValue=""
+          defaultValue="1234"
           render={({ field: { value, onChange } }) => (
             <Input
               className={styles.input}
