@@ -7,11 +7,6 @@ import Input from '@mui/material/TextField'
 import { Button } from '../../components/Button'
 import { IconButton } from '@mui/material'
 
-// type Inputs = {
-//   TextField: string
-//   MyCheckbox: boolean
-// }
-
 const Login: FC = () => {
   const { handleSubmit, control } = useForm()
   const { enqueueSnackbar } = useSnackbar()
