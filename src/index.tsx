@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals'
 import { StyledEngineProvider } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './store'
 import { SnackbarProvider } from 'notistack'
 
 const theme = createTheme({
@@ -25,11 +27,13 @@ root.render(
   <React.StrictMode>
     <SnackbarProvider>
       <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <StyledEngineProvider injectFirst>
-            <App />
-          </StyledEngineProvider>
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider theme={theme}>
+            <StyledEngineProvider injectFirst>
+              <App />
+            </StyledEngineProvider>
+          </ThemeProvider>
+        </Provider>
       </BrowserRouter>
     </SnackbarProvider>
   </React.StrictMode>

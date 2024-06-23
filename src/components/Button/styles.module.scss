@@ -23,7 +23,7 @@
 }
 
 .gray {
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
   color: #fff;
 }
 
@@ -40,4 +40,9 @@
 .form {
   min-width: 288px;
   height: 40px;
+}
+
+.logout {
+  height: 40px;
+  font-size: 13px;
 }

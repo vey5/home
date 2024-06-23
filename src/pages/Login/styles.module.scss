@@ -1,9 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
   padding: 15px;
 }
@@ -20,4 +26,9 @@
 .input {
   margin-bottom: 37px;
   font-size: 18px;
+}
+
+.logout {
+  display: flex;
+  align-items: flex-start;
 }

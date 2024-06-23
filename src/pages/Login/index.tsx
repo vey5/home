@@ -44,55 +44,86 @@ const Login: FC = () => {
       )
   }
 
+  const logout = () => {
+    fetch(`${process.env.REACT_APP_API_URL}/logout`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({}),
+    })
+      .then((res) => res.json())
+      .then(
+        () => {
+          enqueueSnackbar('Выход из системы', {
+            autoHideDuration: 3000,
+          })
+          // setCookie('token', data.token)
+          // console.log('data', data)
+        },
+        (error) => {
+          enqueueSnackbar('Не удалось выйти', {
+            autoHideDuration: 3000,
+          })
+          throw error
+        }
+      )
+  }
+
   return (
-    <div className={styles.wrapper}>
-      <form className={styles.form} onSubmit={handleSubmit(submit)}>
-        <Controller
-          name="username"
-          control={control}
-          rules={{ required: true }}
-          defaultValue="Vlad"
-          render={({ field: { value, onChange } }) => (
-            <Input
-              className={styles.input}
-              size="small"
-              fullWidth
-              id="outlined-basic"
-              label="Login"
-              variant="outlined"
-              value={value}
-              error={!value}
-              onChange={onChange}
-              helperText={!value && 'Введите логин'}
-            />
-          )}
-        />
-        <Controller
-          name="password"
-          control={control}
-          rules={{ required: true }}
-          defaultValue="1234"
-          render={({ field: { value, onChange } }) => (
-            <Input
-              className={styles.input}
-              size="small"
-              fullWidth
-              id="outlined-basic"
-              label="Password"
-              variant="outlined"
-              value={value}
-              error={!value}
-              onChange={onChange}
-              helperText={!value ? 'Введите пароль' : 'Никому не сообщайте свой пароль'}
-            />
-          )}
-        />
-        <IconButton type="submit">
-          <Button size="form" variant="gray">
-            Login
-          </Button>
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <form className={styles.form} onSubmit={handleSubmit(submit)}>
+          <Controller
+            name="username"
+            control={control}
+            rules={{ required: true }}
+            defaultValue="Vlad"
+            render={({ field: { value, onChange } }) => (
+              <Input
+                className={styles.input}
+                size="small"
+                fullWidth
+                id="outlined-basic"
+                label="Login"
+                variant="outlined"
+                value={value}
+                error={!value}
+                onChange={onChange}
+                helperText={!value && 'Введите логин'}
+              />
+            )}
+          />
+          <Controller
+            name="password"
+            control={control}
+            rules={{ required: true }}
+            defaultValue="1234"
+            render={({ field: { value, onChange } }) => (
+              <Input
+                className={styles.input}
+                size="small"
+                fullWidth
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+                value={value}
+                error={!value}
+                onChange={onChange}
+                helperText={!value ? 'Введите пароль' : 'Никому не сообщайте свой пароль'}
+              />
+            )}
+          />
+          <IconButton type="submit">
+            <Button size="form" variant="gray">
+              Login
+            </Button>
+          </IconButton>
+        </form>
+      </div>
+      <div className={styles.logout}>
+        <IconButton onClick={logout}>
+          <Button size="logout">logout</Button>
         </IconButton>
-      </form>
+      </div>
     </div>
   )
 }
