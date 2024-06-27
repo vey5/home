@@ -1,0 +1,29 @@
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { API_URL } from '../../constants/constants'
+
+export const sessionApi = createApi({
+  reducerPath: 'sessionApi',
+  baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
+  endpoints: (builder) => ({
+    Login: builder.mutation({
+      query: (body) => {
+        return {
+          url: 'login',
+          method: 'POST',
+          body,
+        }
+      },
+    }),
+    Logout: builder.query({
+      query: () => {
+        return {
+          url: 'logout',
+          method: 'POST',
+        }
+      },
+    }),
+  }),
+})
+
+export const { useLoginMutation } = sessionApi
+export const { useLogoutQuery } = sessionApi

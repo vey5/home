@@ -53,6 +53,7 @@ const Cabinet: FC = () => {
             component={Link}
           />
         </Tabs>
+        <button className={styles.logout}>LOGOUT</button>
       </div>
       {pathname === ROUTES_PATHS.userinfo && (
         <form onSubmit={handleSubmit(submit)}>
