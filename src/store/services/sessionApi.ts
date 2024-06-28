@@ -6,21 +6,17 @@ export const sessionApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   endpoints: (builder) => ({
     Login: builder.mutation({
-      query: (body) => {
-        return {
-          url: 'login',
-          method: 'POST',
-          body,
-        }
-      },
+      query: (body) => ({
+        url: 'login',
+        method: 'POST',
+        body,
+      }),
     }),
     Logout: builder.query({
-      query: () => {
-        return {
-          url: 'logout',
-          method: 'POST',
-        }
-      },
+      query: () => ({
+        url: 'logout',
+        method: 'POST',
+      }),
     }),
   }),
 })

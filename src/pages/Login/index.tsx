@@ -24,32 +24,12 @@ const Login: FC = () => {
 
   const submit = (_data: any) => {
     sendRequest(_data)
+    // setCookie('token', _data.token)
+    // enqueueSnackbar('failed autorization', {
+    //   autoHideDuration: 3000,
+    // })
     console.log('data', _data)
   }
-
-  // const submit = (_data: any) => {
-  //   fetch(`${process.env.REACT_APP_API_URL}/login`, {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({
-  //       username: 'Vlad',
-  //       password: '1234',
-  //     }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then(
-  //       (data) => {
-  //         setCookie('token', data.token)
-  //         console.log('data', data)
-  //       },
-  //       (error) => {
-  //         enqueueSnackbar('failed autorization', {
-  //           autoHideDuration: 3000,
-  //         })
-  //         throw error
-  //       }
-  //     )
-  // }
 
   // const logout = () => {
   //   fetch(`${process.env.REACT_APP_API_URL}/logout`, {
