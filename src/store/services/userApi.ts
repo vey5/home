@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { API_URL } from '../../constants/constants'
+import { Users } from '../../types/api'
 
 export const userApi = createApi({
   reducerPath: 'userApi',
@@ -24,13 +25,13 @@ export const userApi = createApi({
         method: 'DELETE',
       }),
     }),
-    getUsers: builder.mutation({
-      query: (id) => ({
-        url: `users/${id}?`,
+    getUsers: builder.query<Users, string>({
+      query: () => ({
+        url: 'users',
         method: 'GET',
       }),
     }),
-    getUser: builder.mutation({
+    getUser: builder.query({
       query: (id) => ({
         url: `users/${id}`,
         method: 'GET',
@@ -43,6 +44,6 @@ export const {
   useCreateUserMutation,
   useUpdateUserMutation,
   useDeleteUsersMutation,
-  useGetUsersMutation,
-  useGetUserMutation,
+  useGetUsersQuery,
+  useGetUserQuery,
 } = userApi

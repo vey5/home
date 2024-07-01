@@ -1,0 +1,12 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 5px 2px;
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+  margin: 15px;
+}

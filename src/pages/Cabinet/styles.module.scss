@@ -4,6 +4,14 @@
   margin: 150px;
 }
 
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .tab {
   text-decoration: none;
 }

@@ -7,19 +7,16 @@ import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { Login } from '../Login'
-
-type Inputs = {
-  firstname: string
-  lastname: string
-  post: number
-  info: string
-}
+import { User } from '../../types/api'
+import { UserCard } from '../../components/UserCard'
+import { useGetUsersQuery } from '../../store/services/userApi'
 
 const Cabinet: FC = () => {
   const { pathname } = useLocation()
-  const { register, handleSubmit } = useForm<Inputs>()
+  const { register, handleSubmit } = useForm<User>()
+  const { data = [], isLoading } = useGetUsersQuery('')
 
-  const submit: SubmitHandler<Inputs> = (data: any) => console.log(data)
+  const submit: SubmitHandler<User> = (data) => console.log(data)
 
   return (
     <Layout>
@@ -56,31 +53,27 @@ const Cabinet: FC = () => {
         <button className={styles.logout}>LOGOUT</button>
       </div>
       {pathname === ROUTES_PATHS.userinfo && (
-        <form onSubmit={handleSubmit(submit)}>
-          <label className={styles.login}>
-            FirstName:
-            <input type="text" {...register('firstname')} />
-            LastName:
-            <input type="text" {...register('lastname')} />
-            <button>Отправить</button>
-          </label>
-        </form>
+        <div className={styles.container}>
+          {data.map((item) => (
+            <UserCard key={item.id} {...item} />
+          ))}
+        </div>
       )}
       {pathname === ROUTES_PATHS.post && (
         <form className={styles.form} onSubmit={handleSubmit(submit)}>
-          <input placeholder="post" type="text" {...register('post')} />
-          <input placeholder="info" type="text" {...register('info')} />
+          <input placeholder="post" type="text" />
+          <input placeholder="info" type="text" />
           <button>Отправить</button>
         </form>
       )}
       {pathname === ROUTES_PATHS.user && (
         <form className={styles.form} onSubmit={handleSubmit(submit)}>
-          <input placeholder="firstname" type="text" {...register('firstname')} />
-          <input placeholder="lastname" type="text" {...register('lastname')} />
+          <input placeholder="firstname" type="text" />
+          <input placeholder="lastname" type="text" />
           <button>Отправить</button>
         </form>
       )}
-      {pathname === ROUTES_PATHS.login && <Login />}
+      {/* {pathname === ROUTES_PATHS.login && <Login />} */}
     </Layout>
   )
 }
