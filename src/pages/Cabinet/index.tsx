@@ -9,12 +9,14 @@ import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
 import { SubmitHandler, useForm, Controller } from 'react-hook-form'
 import { Login } from '../Login'
+
 import { User } from '../../types/api'
 import { UserCard } from '../../components/UserCard'
 import { useGetUsersQuery } from '../../store/services/userApi'
 import Input from '@mui/material/TextField'
 import { Button } from '../../components/Button'
 import { IconButton } from '@mui/material'
+import { UserInfo } from '../../components/UserInfo'
 
 const Cabinet: FC = () => {
   const { pathname } = useLocation()
@@ -73,17 +75,17 @@ const Cabinet: FC = () => {
             <div className={styles.wrapperForm}>
               <form className={styles.form} onSubmit={handleSubmit(submit)}>
                 <Controller
-                  name="firstName"
+                  name="email"
                   control={control}
                   rules={{ required: true }}
-                  defaultValue="Vlad"
+                  defaultValue=""
                   render={({ field: { value, onChange } }) => (
                     <Input
                       className={styles.input}
                       size="small"
                       fullWidth
                       id="outlined-basic"
-                      label="Login"
+                      label="Email"
                       variant="outlined"
                       value={value}
                       error={!value}
@@ -96,7 +98,7 @@ const Cabinet: FC = () => {
                   name="lastName"
                   control={control}
                   rules={{ required: true }}
-                  defaultValue="1234"
+                  defaultValue=""
                   render={({ field: { value, onChange } }) => (
                     <Input
                       className={styles.input}
@@ -129,13 +131,7 @@ const Cabinet: FC = () => {
           </Modal>
         </div>
       )}
-      {pathname === ROUTES_PATHS.post && (
-        <form className={styles.form} onSubmit={handleSubmit(submit)}>
-          <input placeholder="post" type="text" />
-          <input placeholder="info" type="text" />
-          <button>Отправить</button>
-        </form>
-      )}
+      {pathname === ROUTES_PATHS.post && <div>{/* <UserInfo /> */}</div>}
       {pathname === ROUTES_PATHS.user && (
         <form className={styles.form} onSubmit={handleSubmit(submit)}>
           <input placeholder="firstname" type="text" />

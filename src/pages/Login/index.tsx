@@ -11,19 +11,12 @@ import { useLoginMutation } from '../../store/services/sessionApi'
 const Login: FC = () => {
   const { handleSubmit, control } = useForm()
   const { enqueueSnackbar } = useSnackbar()
-  const [sendRequest] = useLoginMutation()
-
-  // const setCookie = (name: any, token: any) => {
-  //   Cookie.set(name, token, {
-  //     expires: 3,
-  //     secure: true,
-  //     sameSite: 'strict',
-  //     path: '/',
-  //   })
-  // }
+  const [sendRequest, { data }] = useLoginMutation()
 
   const submit = (_data: any) => {
     sendRequest(_data)
+    setCookie('token', data?.token)
+
     // setCookie('token', _data.token)
     // enqueueSnackbar('failed autorization', {
     //   autoHideDuration: 3000,
@@ -31,38 +24,14 @@ const Login: FC = () => {
     console.log('data', _data)
   }
 
-  // const logout = () => {
-  //   fetch(`${process.env.REACT_APP_API_URL}/logout`, {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({}),
-  //   })
-  //     .then((res) => res.json())
-  //     .then(
-  //       () => {
-  //         enqueueSnackbar('Выход из системы', {
-  //           autoHideDuration: 3000,
-  //         })
-  //         // setCookie('token', data.token)
-  //         // console.log('data', data)
-  //       },
-  //       (error) => {
-  //         enqueueSnackbar('Не удалось выйти', {
-  //           autoHideDuration: 3000,
-  //         })
-  //         throw error
-  //       }
-  //     )
-  // }
-
   return (
     <div className={styles.wrapper}>
       <form className={styles.form} onSubmit={handleSubmit(submit)}>
         <Controller
-          name="username"
+          name="email"
           control={control}
           rules={{ required: true }}
-          defaultValue="Vlad"
+          defaultValue="vlad@mail.ru"
           render={({ field: { value, onChange } }) => (
             <Input
               className={styles.input}
@@ -106,6 +75,19 @@ const Login: FC = () => {
       </form>
     </div>
   )
+}
+
+export const getCookie = (token: any) => {
+  return Cookie.get(token)
+}
+
+export const setCookie = (token: any, value: any) => {
+  return Cookie.set(token, value, {
+    expires: 3,
+    secure: true,
+    sameSite: 'strict',
+    path: '/',
+  })
 }
 
 export { Login }
