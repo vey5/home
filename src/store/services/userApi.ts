@@ -2,16 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { API_URL } from '../../constants/constants'
 import { Users } from '../../types/api'
 import { User } from '../../types/api'
-import { getCookie } from '../../pages/Login'
-
-// const setCookie = (name: any, token: any) => {
-//   Cookie.set(name, token, {
-//     expires: 3,
-//     secure: true,
-//     sameSite: 'strict',
-//     path: '/',
-//   })
-// }
+import { getCookies } from '../../utils/cookie'
 
 export const userApi = createApi({
   reducerPath: 'userApi',
@@ -41,7 +32,7 @@ export const userApi = createApi({
       query: () => ({
         url: 'users',
         method: 'GET',
-        headers: { Autorization: `Bearer ${getCookie('token')}` },
+        headers: { Autorization: `Bearer ${getCookies('token')}` },
       }),
     }),
     getUser: builder.query<User, number>({

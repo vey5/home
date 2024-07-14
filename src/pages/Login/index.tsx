@@ -1,7 +1,8 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
 import { useForm, Controller } from 'react-hook-form'
-import Cookie from 'js-cookie'
+import { useNavigate } from 'react-router-dom'
+import { setCookies } from '../../utils/cookie'
 import { useSnackbar } from 'notistack'
 import Input from '@mui/material/TextField'
 import { Button } from '../../components/Button'
@@ -11,17 +12,25 @@ import { useLoginMutation } from '../../store/services/sessionApi'
 const Login: FC = () => {
   const { handleSubmit, control } = useForm()
   const { enqueueSnackbar } = useSnackbar()
-  const [sendRequest, { data }] = useLoginMutation()
+  const [sendRequest] = useLoginMutation()
+  const navigate = useNavigate()
 
-  const submit = (_data: any) => {
-    sendRequest(_data)
-    setCookie('token', data?.token)
-
-    // setCookie('token', _data.token)
-    // enqueueSnackbar('failed autorization', {
-    //   autoHideDuration: 3000,
-    // })
-    console.log('data', _data)
+  const submit = (data: any) => {
+    sendRequest(data).then(
+      (response) => {
+        setCookies('token', response.data.token)
+        if (data) {
+          navigate('/cabinet', { replace: true })
+        }
+      },
+      (error) => {
+        enqueueSnackbar('failed autorization', {
+          autoHideDuration: 3000,
+        })
+        throw error
+      }
+    )
+    console.log('data', data)
   }
 
   return (
@@ -75,19 +84,6 @@ const Login: FC = () => {
       </form>
     </div>
   )
-}
-
-export const getCookie = (token: any) => {
-  return Cookie.get(token)
-}
-
-export const setCookie = (token: any, value: any) => {
-  return Cookie.set(token, value, {
-    expires: 3,
-    secure: true,
-    sameSite: 'strict',
-    path: '/',
-  })
 }
 
 export { Login }

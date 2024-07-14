@@ -7,10 +7,9 @@ import Modal from '@mui/material/Modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
-import { SubmitHandler, useForm, Controller } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { Login } from '../Login'
 
-import { User } from '../../types/api'
 import { UserCard } from '../../components/UserCard'
 import { useGetUsersQuery } from '../../store/services/userApi'
 import Input from '@mui/material/TextField'
@@ -21,18 +20,10 @@ import { UserInfo } from '../../components/UserInfo'
 const Cabinet: FC = () => {
   const { pathname } = useLocation()
   const [open, setOpen] = useState(false)
-  const { handleSubmit, control } = useForm<User>()
+  const { handleSubmit, control } = useForm()
   const { data = [], isLoading } = useGetUsersQuery('')
 
-  const submit: SubmitHandler<User> = (data) => console.log(data)
-
-  // const handleOpen = () => {
-  //   setOpen(true)
-  // }
-
-  // const handleClose = () => {
-  //   setOpen(false)
-  // }
+  const submit = (data: any) => console.log(data)
 
   return (
     <Layout>
