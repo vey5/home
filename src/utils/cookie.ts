@@ -5,7 +5,7 @@ export const getCookies = (token: any) => {
 }
 
 export const setCookies = (token: any, value: any) => {
-  const sixHours = 6 / 24
+  const sixHours = 9 / 24
   return Cookies.set(token, value, {
     expires: sixHours,
     secure: true,

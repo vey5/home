@@ -4,7 +4,7 @@ import { getCookies } from '../utils/cookie'
 
 const WithAutorization: FC<PropsWithChildren> = ({ children }) => {
   const location = useLocation()
-  const token = getCookies('')
+  const token = getCookies('token')
 
   if (!token) {
     return <Navigate to="/" state={{ from: location }} />
