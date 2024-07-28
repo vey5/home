@@ -7,7 +7,7 @@ export type UserCreate = {
 }
 
 export type User = {
-  id: number
+  userId: number
   firstName: string
   email: string
   isAdmin: boolean

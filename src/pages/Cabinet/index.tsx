@@ -9,19 +9,23 @@ import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
 import { useForm, Controller } from 'react-hook-form'
 import { Login } from '../Login'
-
 import { UserCard } from '../../components/UserCard'
 import { useGetUsersQuery } from '../../store/services/userApi'
 import Input from '@mui/material/TextField'
 import { Button } from '../../components/Button'
 import { IconButton } from '@mui/material'
 import { UserInfo } from '../../components/UserInfo'
+import { useDispatch } from 'react-redux'
+import { setModalOpen, setModalClose, setSelectedUserId } from '../../store/slices/cabinetSlice'
+import { store } from '../../store'
 
 const Cabinet: FC = () => {
   const { pathname } = useLocation()
-  const [open, setOpen] = useState(false)
-  const { handleSubmit, control } = useForm()
-  const { data = [], isLoading } = useGetUsersQuery('')
+  const { handleSubmit } = useForm()
+  const { data = [] } = useGetUsersQuery('')
+  const dispatch = useDispatch()
+  const open = store.getState().form.isModalOpen
+  const id = store.getState().form.selectedUserId
 
   const submit = (data: any) => console.log(data)
 
@@ -58,71 +62,30 @@ const Cabinet: FC = () => {
         <button className={styles.logout}>LOGOUT</button>
       </div>
       {pathname === ROUTES_PATHS.userinfo && (
-        <div onClick={() => setOpen(true)} className={styles.container}>
+        <div
+          onClick={() => {
+            dispatch(setModalOpen())
+            dispatch(setSelectedUserId(id))
+          }}
+          className={styles.container}>
           {data.map((item) => (
-            <UserCard key={item.id} {...item} />
+            <UserCard key={item.userId} {...item} />
           ))}
-          <Modal open={open} onClose={() => setOpen(false)}>
-            <div className={styles.wrapperForm}>
-              <form className={styles.form} onSubmit={handleSubmit(submit)}>
-                <Controller
-                  name="email"
-                  control={control}
-                  rules={{ required: true }}
-                  defaultValue=""
-                  render={({ field: { value, onChange } }) => (
-                    <Input
-                      className={styles.input}
-                      size="small"
-                      fullWidth
-                      id="outlined-basic"
-                      label="Email"
-                      variant="outlined"
-                      value={value}
-                      error={!value}
-                      onChange={onChange}
-                      helperText={!value && 'Введите логин'}
-                    />
-                  )}
-                />
-                <Controller
-                  name="lastName"
-                  control={control}
-                  rules={{ required: true }}
-                  defaultValue=""
-                  render={({ field: { value, onChange } }) => (
-                    <Input
-                      className={styles.input}
-                      size="small"
-                      fullWidth
-                      id="outlined-basic"
-                      label="Password"
-                      variant="outlined"
-                      value={value}
-                      error={!value}
-                      onChange={onChange}
-                      helperText={!value ? 'Введите пароль' : 'Никому не сообщайте свой пароль'}
-                    />
-                  )}
-                />
-                <IconButton type="submit">
-                  <Button size="form" variant="gray">
-                    Create/update
-                  </Button>
-                </IconButton>
-                <IconButton
-                  onClick={(event) => {
-                    event.stopPropagation()
-                    setOpen(false)
-                  }}>
-                  <CloseIcon className={styles.close} />
-                </IconButton>
-              </form>
-            </div>
+          <Modal open={open}>
+            <>
+              <UserInfo />
+              <IconButton
+                onClick={(event) => {
+                  event.stopPropagation()
+                  dispatch(setModalClose())
+                }}>
+                <CloseIcon className={styles.close} />
+              </IconButton>
+            </>
           </Modal>
         </div>
       )}
-      {pathname === ROUTES_PATHS.post && <div>{/* <UserInfo /> */}</div>}
+      {pathname === ROUTES_PATHS.post && <div></div>}
       {pathname === ROUTES_PATHS.user && (
         <form className={styles.form} onSubmit={handleSubmit(submit)}>
           <input placeholder="firstname" type="text" />

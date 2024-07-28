@@ -6,10 +6,9 @@ import { getCookies } from '../../utils/cookie'
 
 export const userApi = createApi({
   reducerPath: 'userApi',
-
   baseQuery: fetchBaseQuery({
     baseUrl: API_URL,
-    headers: { Autorization: `Bearer ${getCookies('token')}` },
+    headers: { Authorization: `Bearer ${getCookies('token')}` },
   }),
   endpoints: (builder) => ({
     createUser: builder.mutation({
@@ -37,7 +36,7 @@ export const userApi = createApi({
         method: 'GET',
       }),
     }),
-    getUser: builder.query<User, number>({
+    getUser: builder.query<User, number | null>({
       query: (id) => `users/${id}`,
     }),
   }),
