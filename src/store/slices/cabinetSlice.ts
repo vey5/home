@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface CabinetState {
   isModalOpen: boolean
-  selectedUserId: number | null
+  selectedUserId: null
 }
 
 const initialState: CabinetState = {

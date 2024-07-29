@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { API_URL } from '../../constants/constants'
-import { Users } from '../../types/api'
-import { User } from '../../types/api'
+import { Users } from '../../types/types'
+import { User } from '../../types/types'
 import { getCookies } from '../../utils/cookie'
 
 export const userApi = createApi({
@@ -36,7 +36,7 @@ export const userApi = createApi({
         method: 'GET',
       }),
     }),
-    getUser: builder.query<User, number | null>({
+    getUser: builder.query<User, null>({
       query: (id) => `users/${id}`,
     }),
   }),

@@ -5,10 +5,11 @@ import { SubmitHandler, useForm, Controller } from 'react-hook-form'
 import { Button } from '../Button'
 import { IconButton } from '@mui/material'
 import { useGetUserQuery } from '../../store/services/userApi'
-import { store } from '../../store'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store'
 
 const UserInfo: FC = () => {
-  const id = store.getState().form.selectedUserId
+  const id = useSelector((state: RootState) => state.form.selectedUserId)
   const { data } = useGetUserQuery(id)
   const { handleSubmit, control } = useForm({
     defaultValues: {

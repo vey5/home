@@ -17,7 +17,7 @@ const UserCard: FC<Props> = ({ userId, firstName, email, lastName, img }) => {
     <div
       onClick={() => {
         dispatch(setModalOpen())
-        dispatch(setSelectedUserId(1))
+        dispatch(setSelectedUserId(userId))
       }}
       className={styles.user}>
       <div className={styles.id}>{userId}</div>
