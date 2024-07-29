@@ -1,5 +1,7 @@
 import { FC } from 'react'
 import styles from './styles.module.scss'
+import { useDispatch } from 'react-redux'
+import { setModalOpen, setSelectedUserId } from '../../store/slices/cabinetSlice'
 
 type Props = {
   userId: number
@@ -10,8 +12,14 @@ type Props = {
 }
 
 const UserCard: FC<Props> = ({ userId, firstName, email, lastName, img }) => {
+  const dispatch = useDispatch()
   return (
-    <div className={styles.user}>
+    <div
+      onClick={() => {
+        dispatch(setModalOpen())
+        dispatch(setSelectedUserId(1))
+      }}
+      className={styles.user}>
       <div className={styles.id}>{userId}</div>
       <div className={styles.image}>
         <img src={img} alt="img" />

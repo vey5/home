@@ -16,7 +16,7 @@ import { Button } from '../../components/Button'
 import { IconButton } from '@mui/material'
 import { UserInfo } from '../../components/UserInfo'
 import { useDispatch } from 'react-redux'
-import { setModalOpen, setModalClose, setSelectedUserId } from '../../store/slices/cabinetSlice'
+import { setModalClose } from '../../store/slices/cabinetSlice'
 import { store } from '../../store'
 
 const Cabinet: FC = () => {
@@ -25,7 +25,6 @@ const Cabinet: FC = () => {
   const { data = [] } = useGetUsersQuery('')
   const dispatch = useDispatch()
   const open = store.getState().form.isModalOpen
-  const id = store.getState().form.selectedUserId
 
   const submit = (data: any) => console.log(data)
 
@@ -63,10 +62,10 @@ const Cabinet: FC = () => {
       </div>
       {pathname === ROUTES_PATHS.userinfo && (
         <div
-          onClick={() => {
-            dispatch(setModalOpen())
-            dispatch(setSelectedUserId(id))
-          }}
+          // onClick={() => {
+          //   dispatch(setModalOpen())
+          //   dispatch(setSelectedUserId(0))
+          // }}
           className={styles.container}>
           {data.map((item) => (
             <UserCard key={item.userId} {...item} />

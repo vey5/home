@@ -16,7 +16,7 @@ export const cabinetSlice = createSlice({
   initialState,
   reducers: {
     setSelectedUserId: (state, action) => {
-      state.selectedUserId = action.payload.selectedUserId
+      state.selectedUserId = action.payload
       console.log(state)
       console.log(action)
     },
