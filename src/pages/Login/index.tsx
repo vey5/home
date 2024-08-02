@@ -20,7 +20,7 @@ const Login: FC = () => {
       (response) => {
         setCookies('token', response.data.token)
         if (data) {
-          navigate('/cabinet', { replace: true })
+          navigate('/cabinet/user-info', { replace: true })
         }
       },
       (error) => {

@@ -1,16 +1,17 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
 import Input from '@mui/material/TextField'
-import { SubmitHandler, useForm, Controller } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { Button } from '../Button'
 import { IconButton } from '@mui/material'
 import { useGetUserQuery } from '../../store/services/userApi'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store'
+import { Loader } from '../Loader'
 
 const UserInfo: FC = () => {
   const id = useSelector((state: RootState) => state.form.selectedUserId)
-  const { data } = useGetUserQuery(id)
+  const { data, isLoading } = useGetUserQuery(id)
   const { handleSubmit, control } = useForm({
     defaultValues: {
       userId: data?.userId,
@@ -23,6 +24,10 @@ const UserInfo: FC = () => {
   console.log(data)
 
   const submit = (_data: any) => console.log(_data)
+
+  if (isLoading) {
+    return <Loader />
+  }
 
   return (
     <div className={styles.wrapperForm}>

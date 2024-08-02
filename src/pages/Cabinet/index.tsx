@@ -1,30 +1,29 @@
 import styles from './styles.module.scss'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { Layout } from '../../components/Layout'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
-import Modal from '@mui/material/Modal'
-import CloseIcon from '@mui/icons-material/Close'
 import { Link, useLocation } from 'react-router-dom'
 import { ROUTES_PATHS } from '../../App'
 import { useForm, Controller } from 'react-hook-form'
-import { Login } from '../Login'
 import { UserCard } from '../../components/UserCard'
 import { useGetUsersQuery } from '../../store/services/userApi'
 import Input from '@mui/material/TextField'
 import { Button } from '../../components/Button'
 import { IconButton } from '@mui/material'
-import { UserInfo } from '../../components/UserInfo'
-import { useDispatch, useSelector } from 'react-redux'
-import { setModalClose } from '../../store/slices/cabinetSlice'
-import { RootState } from '../../store'
+import { Portal } from '../../components/Portal'
+import { Loader } from '../../components/Loader'
+
+//TODO: нет ререндера после получения данных в форму
 
 const Cabinet: FC = () => {
   const { pathname } = useLocation()
   const { handleSubmit } = useForm()
-  const { data = [] } = useGetUsersQuery('')
-  const dispatch = useDispatch()
-  const open = useSelector((state: RootState) => state.form.isModalOpen)
+  const { data = [], isLoading } = useGetUsersQuery('')
+
+  if (isLoading) {
+    return <Loader />
+  }
 
   const submit = (data: any) => console.log(data)
 
@@ -65,18 +64,7 @@ const Cabinet: FC = () => {
           {data.map((item) => (
             <UserCard key={item.userId} {...item} />
           ))}
-          <Modal open={open}>
-            <>
-              <UserInfo />
-              <IconButton
-                onClick={(event) => {
-                  event.stopPropagation()
-                  dispatch(setModalClose())
-                }}>
-                <CloseIcon className={styles.close} />
-              </IconButton>
-            </>
-          </Modal>
+          <Portal />
         </div>
       )}
       {pathname === ROUTES_PATHS.post && <div></div>}
@@ -87,8 +75,6 @@ const Cabinet: FC = () => {
           <button>Отправить</button>
         </form>
       )}
-
-      {/* {pathname === ROUTES_PATHS.login && <Login />} */}
     </Layout>
   )
 }
