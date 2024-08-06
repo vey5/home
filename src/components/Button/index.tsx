@@ -4,7 +4,7 @@ import { Button as MaterialButton, ButtonOwnProps } from '@mui/material'
 import classNames from 'classnames'
 
 type Props = {
-  size?: 'large' | 'medium' | 'form'
+  size?: 'large' | 'medium' | 'forms'
   variant?: 'dark' | 'light' | 'gray'
 } & Omit<ButtonOwnProps, 'variant' | 'size'>
 

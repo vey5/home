@@ -1,5 +1,3 @@
-import { store } from '../store'
-
 export type UserCreate = {
   firstName: string
   email: string

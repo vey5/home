@@ -13,20 +13,22 @@ const Portal: FC = () => {
   const open = useSelector((state: RootState) => state.form.isModalOpen)
 
   return (
-    <>
-      <Modal open={open}>
-        <>
+    <Modal open={open}>
+      <div className={styles.wrapper}>
+        <div className={styles.modal}>
           <UserInfo />
-          <IconButton
-            onClick={(event) => {
-              event.stopPropagation()
-              dispatch(setModalClose())
-            }}>
-            <CloseIcon className={styles.close} />
-          </IconButton>
-        </>
-      </Modal>
-    </>
+          <div className={styles.btnClose}>
+            <IconButton
+              onClick={(event) => {
+                event.stopPropagation()
+                dispatch(setModalClose())
+              }}>
+              <CloseIcon className={styles.close} />
+            </IconButton>
+          </div>
+        </div>
+      </div>
+    </Modal>
   )
 }
 

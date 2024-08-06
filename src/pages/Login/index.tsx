@@ -77,7 +77,7 @@ const Login: FC = () => {
           )}
         />
         <IconButton type="submit">
-          <Button size="form" variant="gray">
+          <Button size="forms" variant="gray">
             Login
           </Button>
         </IconButton>
