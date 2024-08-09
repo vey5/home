@@ -12,7 +12,9 @@ export type User = {
   email: string
   isAdmin: boolean
   lastName?: string
-  img?: string
+  password?: string
+  confirmPassword?: string
+  // img?: string
 }
 
 export type Users = User[]

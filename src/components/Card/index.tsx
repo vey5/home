@@ -1,6 +1,5 @@
 import styles from './styles.module.scss'
 import { FC } from 'react'
-
 import CountertopsIcon from '@mui/icons-material/Countertops'
 import BedIcon from '@mui/icons-material/Bed'
 import FlareIcon from '@mui/icons-material/Flare'

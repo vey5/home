@@ -1,12 +1,37 @@
 .user {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 5px 2px;
   background-color: transparent;
-  height: 150px;
-  width: 150px;
+  height: 300px;
+  width: 220px;
   margin: 15px;
+  padding: 10px;
+}
+
+.img {
+  height: 160px;
+  width: 190px;
+}
+
+.image * {
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.lastname {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.email {
+  font-size: 18px;
+  font-weight: 700;
 }
